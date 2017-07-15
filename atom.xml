@@ -4,7 +4,7 @@
   <title><![CDATA[BI blog 4U]]></title>
   <link href="http://narusou.github.io/atom.xml" rel="self"/>
   <link href="http://narusou.github.io/"/>
-  <updated>2017-07-15T23:15:37+09:00</updated>
+  <updated>2017-07-16T01:04:16+09:00</updated>
   <id>http://narusou.github.io/</id>
   <author>
     <name><![CDATA[Souichi Narumiya]]></name>
@@ -18,7 +18,7 @@
     <link href="http://narusou.github.io/blog/2017/07/15/test/"/>
     <updated>2017-07-15T22:20:27+09:00</updated>
     <id>http://narusou.github.io/blog/2017/07/15/test</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>This site is created for my practice to develop homepages and traslate articles about Business Intelligence.</p>
 ]]></content>
   </entry>
   
