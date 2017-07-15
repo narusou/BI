@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[BI blog 4U]]></title>
+  <link href="http://narusou.github.io/atom.xml" rel="self"/>
+  <link href="http://narusou.github.io/"/>
+  <updated>2017-07-15T22:21:03+09:00</updated>
+  <id>http://narusou.github.io/</id>
+  <author>
+    <name><![CDATA[Souichi Narumiya]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Test]]></title>
+    <link href="http://narusou.github.io/blog/2017/07/15/test/"/>
+    <updated>2017-07-15T22:20:27+09:00</updated>
+    <id>http://narusou.github.io/blog/2017/07/15/test</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[First Test]]></title>
+    <link href="http://narusou.github.io/blog/2017/07/15/first-test/"/>
+    <updated>2017-07-15T00:00:00+09:00</updated>
+    <id>http://narusou.github.io/blog/2017/07/15/first-test</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+</feed>
