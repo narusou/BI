@@ -1,2 +1,0 @@
-# BI
-business intelligence
