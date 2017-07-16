@@ -4,7 +4,7 @@
   <title><![CDATA[BI blog 4U]]></title>
   <link href="http://narusou.github.io/atom.xml" rel="self"/>
   <link href="http://narusou.github.io/"/>
-  <updated>2017-07-16T23:35:56+09:00</updated>
+  <updated>2017-07-16T23:42:47+09:00</updated>
   <id>http://narusou.github.io/</id>
   <author>
     <name><![CDATA[Souichi Narumiya]]></name>
@@ -27,7 +27,7 @@
 
 <h2>環境</h2>
 
-<p>PC:HPchromebook
+<p>PC:HPchromebook<br/>
 OS:Google Chrome and UBUNTU 14.04 LTS</p>
 
 <h2>OctPressをGITHUBにdeployするためにしたこと</h2>
@@ -42,8 +42,8 @@ OS:Google Chrome and UBUNTU 14.04 LTS</p>
 
 <h2>躓いた点</h2>
 
-<p>・rubyとrbenv versionの整理
-・git pull</p>
+<p> ・rubyとrbenv versionの整理<br/>
+ ・git pull</p>
 
 <h2>使用したコード 順不同</h2>
 
