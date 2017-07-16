@@ -4,7 +4,7 @@
   <title><![CDATA[BI blog 4U]]></title>
   <link href="http://narusou.github.io/atom.xml" rel="self"/>
   <link href="http://narusou.github.io/"/>
-  <updated>2017-07-16T20:33:33+09:00</updated>
+  <updated>2017-07-16T23:34:32+09:00</updated>
   <id>http://narusou.github.io/</id>
   <author>
     <name><![CDATA[Souichi Narumiya]]></name>
@@ -32,12 +32,13 @@ OS:Google Chrome and UBUNTU 14.04 LTS</p>
 
 <h2>OctPressをGITHUBにdeployするためにしたこと</h2>
 
-<p>1,githubにブランチ作成
+<pre><code>1,githubにブランチ作成
 2,rbenvのインストール
 3,rubｙのインストール
 4,githubとlocalの同期
 5,rakeで記事の作成
-6,generate, deploy</p>
+6,generate, deploy
+</code></pre>
 
 <h2>躓いた点</h2>
 
