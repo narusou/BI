@@ -9,7 +9,8 @@
   <meta name="author" content="Souichi Narumiya">
 
   
-  <meta name="description" content="This site is created for my practice to develop homepages and traslate articles about Business Intelligence. ">
+  <meta name="description" content="This site is created for my practice to develop homepages and traslate articles about Business Intelligence. 環境 PC:HPchromebook
+OS:Google Chrome and &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -102,7 +103,68 @@
 
 <div class="entry-content"><p>This site is created for my practice to develop homepages and traslate articles about Business Intelligence.</p>
 
+<!--more-->
+
+
 <p><img src="/images/test.png" alt="test" /></p>
+
+<h2>環境</h2>
+
+<p>PC:HPchromebook
+OS:Google Chrome and UBUNTU 14.04 LTS</p>
+
+<h2>OctPressをGITHUBにdeployするためにしたこと</h2>
+
+<p>1,githubにブランチ作成
+2,rbenvのインストール
+3,rubｙのインストール
+4,githubとlocalの同期
+5,rakeで記事の作成
+6,generate, deploy</p>
+
+<h2>躓いた点</h2>
+
+<p>・rubyとrbenvのversionの整理
+・git pullでのlocal同期</p>
+
+<h2>使用したコード 順不同</h2>
+
+<pre><code>$ rake deploy
+$ rake generate
+$ ruby -v
+$ ruby --version
+$ rbenv versions
+$ rbenv version
+$ source ~/.bash_profile
+$ echo $PATH
+$ which ruby
+$ which rbenv
+$ rbenv init
+$ rbenv global 2.4.1
+$ bundle exec 
+$ git pull
+$ git push
+$ git commit
+$ sudo apt-get install ruby
+$ sudo apt-get install git
+$ git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
+$ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' &gt;&gt; ~/.profile
+$ echo 'eval "$(rbenv init -)"' &gt;&gt; ~/.profile
+$ exec $SHELL -l
+$ rbenv install -l
+$ rbenv install 2.4.1
+$ rbenv exec gem install bundler
+$ rbenv rehash
+$ git clone git://github.com/imathis/octopress.git octopress
+$ cd octopress
+$ bundle install --path vendor/bundle
+$ git clone git://github.com/lucaslew/whitespace.git .themes/whitespace
+$ rake install['whitespace'] # for zsh, use: rake install\['whitespace'\]
+$ rake new_post['test']
+$ rake preview
+$ rake setup_github_pages
+</code></pre>
 </div>
 
 
