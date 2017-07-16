@@ -4,11 +4,11 @@
   <title><![CDATA[BI blog 4U]]></title>
   <link href="http://narusou.github.io/atom.xml" rel="self"/>
   <link href="http://narusou.github.io/"/>
-  <updated>2017-07-16T16:43:22+09:00</updated>
+  <updated>2017-07-16T20:20:08+09:00</updated>
   <id>http://narusou.github.io/</id>
   <author>
     <name><![CDATA[Souichi Narumiya]]></name>
-    
+    <email><![CDATA[narumiyasouichi@yahoo.co.jp]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
