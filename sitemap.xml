@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://narusou.github.io/blog/2017/07/18/data-processing-with-spark-in-r-and-python/</loc>
+<lastmod>2017-07-18T14:57:39+09:00</lastmod>
+</url>
+<url>
+<loc>http://narusou.github.io/blog/2017/07/18/translation1/</loc>
+<lastmod>2017-07-18T14:56:11+09:00</lastmod>
+</url>
+<url>
 <loc>http://narusou.github.io/blog/2017/07/15/test/</loc>
 <lastmod>2017-07-15T22:20:27+09:00</lastmod>
 </url>
