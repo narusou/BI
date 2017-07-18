@@ -4,7 +4,7 @@
   <title><![CDATA[BI blog 4U]]></title>
   <link href="http://narusou.github.io/atom.xml" rel="self"/>
   <link href="http://narusou.github.io/"/>
-  <updated>2017-07-18T22:49:11+09:00</updated>
+  <updated>2017-07-18T23:55:17+09:00</updated>
   <id>http://narusou.github.io/</id>
   <author>
     <name><![CDATA[Souichi Narumiya]]></name>
@@ -20,7 +20,7 @@
     <id>http://narusou.github.io/blog/2017/07/18/study-and-memo-about-apatche-spark</id>
     <content type="html"><![CDATA[<p><a href="https://www.youtube.com/watch?v=1DAm9Cr23bg">https://www.youtube.com/watch?v=1DAm9Cr23bg</a></p>
 
-<h1>PyConJPの動画でApatche Sparkの勉強メモ</h1>
+<h3>PyConJPの動画でApatche Sparkの勉強メモ</h3>
 
 <p>・Apatche Sparkは高速分散処理システム。MapReduceと比較すると、中間ファイル作成などがない。<br/>
 ・多目的なライブラリがあります。 -SparkSQLなど<br/>
