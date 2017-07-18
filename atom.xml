@@ -4,7 +4,7 @@
   <title><![CDATA[BI blog 4U]]></title>
   <link href="http://narusou.github.io/atom.xml" rel="self"/>
   <link href="http://narusou.github.io/"/>
-  <updated>2017-07-18T15:27:24+09:00</updated>
+  <updated>2017-07-18T15:38:44+09:00</updated>
   <id>http://narusou.github.io/</id>
   <author>
     <name><![CDATA[Souichi Narumiya]]></name>
@@ -18,27 +18,24 @@
     <link href="http://narusou.github.io/blog/2017/07/18/data-processing-with-spark-in-r-and-python/"/>
     <updated>2017-07-18T14:57:39+09:00</updated>
     <id>http://narusou.github.io/blog/2017/07/18/data-processing-with-spark-in-r-and-python</id>
-    <content type="html"><![CDATA[<h3>Data processing with Spark in R &amp; Python</h3>
+    <content type="html"><![CDATA[<h3>原文</h3>
 
 <p>I recently gave a talk on data processing with Apache Spark using R and Python. tl;dr – the slides and presentation can be accessed below:<br/>
-<a href="https://www.brighttalk.com/webcast/9059/172833">https://www.brighttalk.com/webcast/9059/172833</a><br/>
-As noted in my previous post, Spark has become the defacto standard for big data applications   and has been adopted quickly by the industry. See Cloudera’s  One Platform initiative blog post<br/>
- by CEO Mike Olson for their commitment to Spark.<br/>
-In data science R had seen rapid adoption, not only because it was open source and free   compared to costly SAS, but also the huge number of statistical and graphical packages provided<br/>
-by R for data science. The most popular ones of course are the ones from Hadley Wickham (dplyr,<br/>
-ggplot2, reshape2, tidyr and more). On the other hand, Python had seen rapid adoption among<br/>
-developers and engineers due to its being useful to script big data tasks along with data<br/>
-analysis with the help of packages like pandas, scikit-learn, NumPy, SciPy, matplotlib etc.<br/>
-and also the popular iPython &amp; later Jupyter notebooks.<br/>
-There are numerous posts strewn on the net picking fights between R and Python. However it is quite usual for any big data and data science shop to have developers and data scientists who use either or both these tools. Spark makes it easy for both communities to leverage the power of Hadoop and distributed processing systems with its own APIs like DataFrames which can be used in a polyglot fashion. Therefore it is essential for any data enthusiast to learn about how data processing in Spark can be done using R or Python.</p>
+<a href="https://www.brighttalk.com/webcast/9059/172833">https://www.brighttalk.com/webcast/9059/172833</a></p>
+
+<p>As noted in my previous post, Spark has become the defacto standard for big data applications   and has been adopted quickly by the industry. See Cloudera’s  One Platform initiative blog post by CEO Mike Olson for their commitment to Spark.　In data science R had seen rapid adoption, not only because it was open source and free   compared to costly SAS, but also the huge number of statistical and graphical packages provided　by R for data science. The most popular ones of course are the ones from Hadley Wickham (dplyr,　ggplot2, reshape2, tidyr and more). On the other hand, Python had seen rapid adoption among　developers and engineers due to its being useful to script big data tasks along with data　analysis with the help of packages like pandas, scikit-learn, NumPy, SciPy, matplotlib etc.　and also the popular iPython &amp; later Jupyter notebooks.　</p>
+
+<p>There are numerous posts strewn on the net picking fights between R and Python. However it is quite usual for any big data and data science shop to have developers and data scientists who use either or both these tools. Spark makes it easy for both communities to leverage the power of Hadoop and distributed processing systems with its own APIs like DataFrames which can be used in a polyglot fashion. Therefore it is essential for any data enthusiast to learn about how data processing in Spark can be done using R or Python.</p>
 
 <h3>翻訳</h3>
 
 <p>最近、RとPythonを使用したApatche Sparkによるデータプロセスに関して話をした。下記のURLからスライドとプレゼンテーションにアクセス可能。<br/>
-<a href="https://www.brighttalk.com/webcast/9059/172833">https://www.brighttalk.com/webcast/9059/172833</a><br/>
-過去の投稿にあるように、Sparkはビックデータアプリケーションの事実上のスタンダードになり、また急速にBI業界に取り入れられた経緯がある。CEO Mike Olsonによる彼らのSparkへのコミットメントに関するブログ投稿を参照。
-データサイエンスに関して、RはコストがかかるSASに比べてフリーでオープンソースであるという理由のみならず、データサイエンスのために用意された統計的でグラフィカルな数多くのパッケージによって急速に普及してきた。もっともよく知られている事例としてはHadley Wickham(dplyr, ggplot2, reshape2, tidyr and more)による。一方、Pythonは開発者とエンジニアの間で、Pandaやscikit-learn、NumPy, SciPy,matplotlibとかのようなパッケージによってデータアナリシスにおけるビッグデータのタスクを記述するのに便利であるため急速に採用されてきた。そして、iPython, 後期のJupiter notebooksによるものがよく知られている。<br/>
-非常に多くのRとPythonに関する両社の批判や議事が散らばった投稿として見受けられる。しかし、これらを同時に両方、もしくは二種類を使用するデータサイエンティストと開発者達を保有するのはデータサイエンスやビッグデータを生業にするものにとってはかなり普通のことと思われる。SparkはHadoopの力と、多言語仕様で使用することが出来るデータフレームのようなSparkのAPIと、それを使用したディストリビューションのプロセスシステムを、この両者のコミュニティが利用することを簡単にする。それゆえ、RとPyhonによるSparkが行うデータプロセスがどのようなものなのかを学ぶことはデータマニアにとっては必要不可欠なことだと思われる。</p>
+<a href="https://www.brighttalk.com/webcast/9059/172833">https://www.brighttalk.com/webcast/9059/172833</a></p>
+
+<p>過去の投稿にあるように、Sparkはビックデータアプリケーションの事実上のスタンダードになり、また急速にBI業界に取り入れられた経緯がある。CEO Mike Olsonによる彼らのSparkへのコミットメントに関するブログ投稿を参照。
+データサイエンスに関して、RはコストがかかるSASに比べてフリーでオープンソースであるという理由のみならず、データサイエンスのために用意された統計的でグラフィカルな数多くのパッケージによって急速に普及してきた。もっともよく知られている事例としてはHadley Wickham(dplyr, ggplot2, reshape2, tidyr and more)による。一方、Pythonは開発者とエンジニアの間で、Pandaやscikit-learn、NumPy, SciPy,matplotlibとかのようなパッケージによってデータアナリシスにおけるビッグデータのタスクを記述するのに便利であるため急速に採用されてきた。そして、iPython, 後期のJupiter notebooksによるものがよく知られている。</p>
+
+<p>非常に多くのRとPythonに関する両社の批判や議事が散らばった投稿として見受けられる。しかし、これらを同時に両方、もしくは二種類を使用するデータサイエンティストと開発者達を保有するのはデータサイエンスやビッグデータを生業にするものにとってはかなり普通のことと思われる。SparkはHadoopの力と、多言語仕様で使用することが出来るデータフレームのようなSparkのAPIと、それを使用したディストリビューションのプロセスシステムを、この両者のコミュニティが利用することを簡単にする。それゆえ、RとPyhonによるSparkが行うデータプロセスがどのようなものなのかを学ぶことはデータマニアにとっては必要不可欠なことだと思われる。</p>
 ]]></content>
   </entry>
   
