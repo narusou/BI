@@ -1,141 +1,120 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[BI blog 4U]]></title>
-  <link href="http://narusou.github.io/atom.xml" rel="self"/>
-  <link href="http://narusou.github.io/"/>
-  <updated>2017-07-21T15:05:46+09:00</updated>
-  <id>http://narusou.github.io/</id>
-  <author>
-    <name><![CDATA[Souichi Narumiya]]></name>
-    <email><![CDATA[narumiyasouichi@yahoo.co.jp]]></email>
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>What Roles Do You Need in Your Data Science Team? - BI blog 4U</title>
+  <meta name="author" content="Souichi Narumiya">
 
   
-  <entry>
-    <title type="html"><![CDATA[Data Science Project Life-cycle]]></title>
-    <link href="http://narusou.github.io/blog/2017/07/21/data-science-project-life-cycle/"/>
-    <updated>2017-07-21T14:49:44+09:00</updated>
-    <id>http://narusou.github.io/blog/2017/07/21/data-science-project-life-cycle</id>
-    <content type="html"><![CDATA[<h1>原文</h1>
-
-<h3>The data science project lifecycle</h3>
-
-<p>How does the typical data science project life-cycle look like?
-This post looks at practical aspects of implementing data science projects. It also assumes a certain level of maturity in big data (more on big data maturity models in the next post) and data science management within the organization. Therefore the life cycle presented here differs, sometimes significantly from purist definitions of ‘science’ which emphasize the hypothesis-testing approach. In practice, the typical data science project life-cycle resembles more of an engineering view imposed due to constraints of resources (budget, data and skills availability) and time-to-market considerations.
-The CRISP-DM model (CRoss Industry Standard Process for Data Mining) has traditionally defined six steps in the data mining life-cycle. Data science is similar to data mining in several aspects, hence there’s some similarity with these steps.</p>
-
-<p>The CRISP model steps are:
-1. Business Understanding
-2. Data Understanding
-3. Data Preparation
-4. Modeling
-5. Evaluation and
-6. Deployment</p>
-
-<p>Given a certain level of maturity in big data and data science expertise within the organization, it is reasonable to assume availability of a library of assets related to data science implementations. Key among these are:</p>
-
-<ol>
-<li>Library of business use-cases for big data/ data science applications</li>
-<li>Data requirements – business use case mapping matrix</li>
-<li>Minimum data quality requirements (test cases to ensure minimum level of data quality to ensure feasibility)</li>
-</ol>
-
-
-<p>In most organizations, data science is a fledgling discipline, hence data scientists (except those from actuarial background) are likely to have limited business domain expertise – therefore they need to be paired with business people and those with expertise in understanding the data. This helps data scientists gain or work together on steps 1 and 2 of the CRISM-DM model – i.e. business understanding and data understanding.The typical data science project then becomes an engineering exercise in terms of a defined framework of steps or phases and exit criteria, which allow making informed decisions on whether to continue projects based on pre-defined criteria, to optimize resource utilization and maximize benefits from the data science project. This also prevents the project from degrading into money-pits due to pursuing nonviable hypotheses and ideas.</p>
-
-<p>The data science life-cycle thus looks somewhat like:</p>
-
-<ol>
-<li>Data acquisition</li>
-<li>Data preparation</li>
-<li>Hypothesis and modeling</li>
-<li>Evaluation and Interpretation</li>
-<li>Deployment</li>
-<li>Operations</li>
-<li>Optimization</li>
-</ol>
-
-
-<p>Data Acquisition – may involve acquiring data from both internal and external sources, including social media or web scraping. In a steady state, data extraction and transfer routines would be in place, and new sources, once identified would be acquired following the established processes.</p>
-
-<p>Data preparation – Usually referred to as “data wrangling”, this step involves cleaning the data and reshaping it into a readily usable form for performing data science. This is similar to the traditional ETL steps in data warehousing in certain aspects, but involves more exploratory analysis and is primarily aimed at extracting features in usable formats.</p>
-
-<p>Hypothesis and modeling are the traditional data mining steps – however in a data science project, these are not limited to statistical samples. Indeed the idea is to apply machine learning techniques to all data. A key sub-step is performed here for model selection. This involves the separation of a training set for training the candidate machine-learning models, and validation sets and test sets for comparing model performances and selecting the best performing model, gauging model accuracy and preventing over-fitting.</p>
-
-<p>Steps 2 through 4 are repeated a number of times as needed; as the understanding of data and business becomes clearer and results from initial models and hypotheses are evaluated, further tweaks are performed. These may sometimes include Step 5 (deployment) and be performed in a pre-production or “limited” / “pilot” environment before the actual full-scale “production” deployment, or could include fast-tweaks after deployment, based on the continuous deployment model.</p>
-
-<p>Once the model has been deployed in production, it is time for regular maintenance and operations. This operations phase could also follow a target DevOps model which gels well with the continuous deployment model, given the rapid time-to-market requirements in big data projects. Ideally, the deployment includes performance tests to measure model performance, and can trigger alerts when the model performance degrades beyond a certain acceptable threshold.
-The optimization phase is the final step in the data science project life-cycle. This could be triggered by failing performance, or due to the need to add new data sources and retraining the model, or even to deploy improved versions of the model based on better algorithms.
-Agile development processes, especially continuous delivery lends itself well to the data science project life-cycle. As mentioned before, with increasing maturity and well-defined project goals, pre-defined performance criteria can help evaluate feasibility of the data science project early enough in the life-cycle. This early comparison helps the data science team to change approaches, refine hypothesis and even discard the project if the business case is nonviable or the benefits from the predictive models are not worth the effort to build it.</p>
-
-<h1>翻訳</h1>
-
-<h3>データサイエンスプロジェクトライフサイクル</h3>
-
-<p>典型的なデータサイエンスプロジェクトのライフサイクルはどのようなものか？
-この投稿では実装のデータサイエンスプロジェクトの実践的な側面をみていく。次の投稿においてはビッグデータ習熟モデルについて投稿するが、本投稿では習熟モデルと組織内でのデータサイエンスマネジメントのある水準を仮定していく。
-それゆえ、ここでプレゼンされるライフサイクルは、仮説検証を強調する科学の純粋な定義とは時として大幅に異なる。
-実践の中では、この典型的なデータサイエンスプロジェクトのライフサイクルは製品化までの完了期限への考慮、予算やデータと能力可用性のリソースに制限されたエンジニアの視点に共通項を持ち合わせる。</p>
-
-<p>このCRISM-DMモデル（CRoss Industry Standard Process for Data Mining）はデータマイニングのライフサイクルの中で伝統的に６つのステップに定義されている。データサイエンスは何点かの側面からデータマイニングに似ている、それゆえそこにはこれらのステップにおいてもいくつかの類似点がある。</p>
-
-<p>【CRISM-DMモデルのステップ】<br/>
-１、ビジネスへの理解<br/>
-２、データへの理解<br/>
-３、データの準備段階<br/>
-４、モデリング<br/>
-５、評価<br/>
-６、ディプロイ</p>
-
-<p>組織でのデータサイエンスの専門知識とビッグデータの習熟度の水準さえあれば、データサイエンスの実装に関係したアセットライブラリの可用性を仮定することはリーズナブルだといえる。</p>
-
-<p>【Key points】<br/>
-１、ビッグデータとデータサイエンスのアプリケーションに関してのビジネスユースケースのライブラリ<br/>
-２、データの要求-ビジネスユースケースのマッピングマトリクス<br/>
-３、最低限のデータ品質の要求（実行可能性を保障するデータ品質の最低限の水準を保証するテストケース）</p>
-
-<p>ほとんどの組織において、データサイエンスは生まれたての分野であり、結果としてデータサイエンティストたちは（数理のバックグラウンドを持っている者たちをのぞき）ビジネスについては専門知識が制限されているし、それゆえ彼らはビジネス側の人と組み、データに精通した専門知識とビジネス知識をペアにする必要がある。
-これはデータサイエンティストがCRISM－DMモデルのビジネス理解、データ理解といった１、２のステップに進むのを手助けし、協働することを手助けする。</p>
-
-<p>事前に定義された基準を基礎としてプロジェクトをつづけるかどうかの意思決定をさせるような、リソース利用の最適化とデータサイエンスプロジェクトの有益性を最大化するような完了標準と、フェーズやステップの定義されたフレームワークに関して、この典型的なデータサイエンスのプロジェクトはエンジニアリングの実践演習になる。
-これはまたプロジェクトがあり得ない仮説と考えを追いかける金食い虫に成り下がることを防止する。
-このデータサイエンスのライフサイクルはそれゆえ、いくらか下記のように見える。</p>
-
-<p>１、データ獲得<br/>
-２、データ準備<br/>
-３、仮説とモデリング<br/>
-４、評価と解釈<br/>
-５、ディプロイ<br/>
-６、運用<br/>
-７、最適化</p>
-
-<p>データ獲得-ウェブスクレイピングやソーシャルメディアを含む内部と外部のデータソース、両方からのデータ獲得を意味している。安定した状態では、データのエクストラクションと移動のルーティンが実行され、新しいソースが確認され次第、打ち立てられたプロセスに従って取得される。</p>
-
-<p>データ準備-データラングリングとして参照され、データのクリーニングとデータサイエンスのパフォーマンスのために容易に利用できる形に落とし込むステップを含んでいる。</p>
-
-<p>これはデータウェアハウスの側面における伝統的なETLのステップに似ているが、より予備的な分析と主に利用可能なフォーマットの中ではエクストラクトの特徴を狙いとしている。</p>
-
-<p>仮説とモデリング-これは伝統的なデータマイニングのステップであり、しかしながらデータサイエンスのプロジェクトではこれらは統計的なサンプルデータに限定されていない。実際には、この考えは機械学習の技術をすべてのデータに適用するためにある。カギになるサブステップがここでモデルの選択のためになされる。<br/>
-これは機械学習のモデル候補のトレーニングセットの分割を含み、また最高のパフォーマンスを出すモデルパフォーマンスの選択とモデルの正確さを図り、過学習を防ぐ。</p>
-
-<p>ステップ２から４は必要に応じて何回も繰り返される、というのもビジネスとデータの理解がよりクリアになり、最初のモデルと仮説から評価され、さらに微調整も行われるためだ。継続移設モデル（continuous deployment model）をもとに、これらは時折、実際のフルスケールの本番環境にdeploymentされる前に、限定された、もしくはパイロット環境、プレ本番環境でステップ5（deployment）を行うことも含み、deploymentのあとの即時調整も含みうる。</p>
-
-<p>一度このモデルが製品にdeploymentされると、定常業務と保守の時間がくる。この運用の段階もまた、ビッグデータのプロジェクトでの急な製品化への期限要求がくれば、継続移設モデル（continuous deployment model）と相性のいい対象のDevOpsに従いうる。理想的には、このdeploymentはモデルパフォーマンスをはかるためのパフォーマンステストを含み、このモデルパフォーマンスが許容できる閾値を超えて程度が低い時にはアラートを鳴らすことが出来ることだ。</p>
-
-<p>最適化の段階はデータサイエンスのライフサイクルにおいて最後の段階になる。この段階はパフォーマンスの落ち込みにより、もしくは新しいデータソースが追加されたためモデルの再トレーニングをしなければならないことにより、またはよりよいアルゴリズムを基にした改良されたより良いモデルのversionをdeployするために使われる。</p>
-
-<p>アジャイルのdeploymentプロセス、特に継続的なデリバリはそれ自身の多くをデータサイエンスプロジェクトのライフサイクルに貸し出している。以前にお話ししたように、熟練され、良く定義されたプロジェクトのゴール、事前に定義されたパフォーマンスの標準はそのライフサイクルの中の十分早い段階で実行可能性を評価することを手助けすることができる。この比較はデータサイエンスチームがアプローチを変更したり、仮説を再精製したり、予見されるモデルからの利益が組み上げる価値のないものだったりビジネスケースが育成不能なものであれば、プロジェクトを廃棄することでさえ早い段階で助けになる。</p>
-]]></content>
-  </entry>
+  <meta name="description" content="原文 Over the past few weeks, we’ve had several conversations in our data lab regarding data engineering problems and day to day problems we face with &hellip;">
   
-  <entry>
-    <title type="html"><![CDATA[What Roles Do You Need in Your Data Science Team?]]></title>
-    <link href="http://narusou.github.io/blog/2017/07/19/what-roles-do-you-need-in-your-data-science-team/"/>
-    <updated>2017-07-19T13:10:55+09:00</updated>
-    <id>http://narusou.github.io/blog/2017/07/19/what-roles-do-you-need-in-your-data-science-team</id>
-    <content type="html"><![CDATA[<h1>原文</h1>
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://narusou.github.io/blog/2017/07/19/what-roles-do-you-need-in-your-data-science-team">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="BI blog 4U" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
+<!--- MathJax Configuration -->
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <meta property="og:title" content="What roles do you need in your data science team? - BI blog 4U" />
+<meta property="og:description" content="原文 Over the past few weeks, we’ve had several conversations in our data lab regarding data engineering problems and day to day problems we face with &hellip;" />
+<meta property="og:url" content="http://narusou.github.io/blog/2017/07/19/what-roles-do-you-need-in-your-data-science-team/" />
+<meta property="og:image" content="http://narusou.github.io" />
+<meta property="og:author" content="Souichi Narumiya" />
+<meta property="og:site_name" content="BI blog 4U" />
+<meta property="og:locale" content="ja_JP" />
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="1735411246487943" />
+
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">BI blog 4U</a></h1>
+  
+    <h2>articles and translations</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscribe" data-subscription="rss email">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewbox="0 0 100 100"><path class="social" d="M 13.310204,73.332654 C 5.967347,73.332654 0,79.322448 0,86.621428 c 0,7.338776 5.967347,13.262246 13.310204,13.262246 7.370408,0 13.328572,-5.92245 13.328572,-13.262246 0,-7.29898 -5.958164,-13.288774 -13.328572,-13.288774 z M 0.01530612,33.978572 V 53.143878 C 12.493878,53.143878 24.229592,58.02347 33.068368,66.865306 41.894898,75.685714 46.767346,87.47449 46.767346,100 h 19.25 C 66.017346,63.592858 36.4,33.979592 0.01530612,33.978572 l 0,0 z M 0.03877552,0 V 19.17449 C 44.54796,19.17551 80.77551,55.437756 80.77551,100 H 100 C 100,44.87653 55.15102,0 0.03877552,0 z"></path></svg></a></li>
+  
+    <li><a href="narumiyasouichi@yahoo.co.jp" rel="subscribe-email" title="subscribe via email" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="25" viewbox="0 0 100 100"><path class="social" d=""m 154.85133,65.376619 -18.75652,19.018743 60.02087,0 -18.75653,-19.018743 -11.25391,14.264058 z m 48.76696,-33.282799 -22.50783,28.528113 22.50782,23.773429 z m -75.02609,0 0,52.301542 c 0,0 20.70458,-21.967007 22.50783,-23.773429 z m 7.50261,-2e-6 30.01043,38.037487 30.01044,-38.037487 z""></path></svg></a></li>
+  
+</ul>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      <form action="https://www.google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="sitesearch" value="narusou.github.io" />
+    
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">What Roles Do You Need in Your Data Science Team?</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2017-07-19T13:10:55+09:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>19</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>1:10 pm</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h1>原文</h1>
 
 <p>Over the past few weeks, we’ve had several conversations in our data lab regarding data engineering problems and day to day problems we face with unsupervised data scientists who find it difficult to deploy their code into production.</p>
 
@@ -299,149 +278,101 @@ app/web開発、ソフトウェアエンジニアの原則の理解<br/>
     　　</p>
 
 <p>one-offのプロジェクト、もしくは再利用される商品のコンサルティングサービスに焦点をおくデータサイエンスチームにかかわらず、このチームは依然として共通した理解、プロセスに関して、そしてツールと実際の仕事を行うためのプラットフォームとツールに関して最低限の基礎を必要とする。私たちはそういったツールやプラットフォームといったもののためのデータエンジニアリングするための必要項目を次の投稿で見直すこととする。</p>
-]]></content>
-  </entry>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
   
-  <entry>
-    <title type="html"><![CDATA[Study and Memo About Apatche Spark]]></title>
-    <link href="http://narusou.github.io/blog/2017/07/18/study-and-memo-about-apatche-spark/"/>
-    <updated>2017-07-18T18:36:43+09:00</updated>
-    <id>http://narusou.github.io/blog/2017/07/18/study-and-memo-about-apatche-spark</id>
-    <content type="html"><![CDATA[<p><a href="https://www.youtube.com/watch?v=1DAm9Cr23bg">https://www.youtube.com/watch?v=1DAm9Cr23bg</a></p>
 
-<h3>PyConJPの動画でApatche Sparkの勉強メモ</h3>
 
-<p>・Apatche Sparkは高速分散処理システム。MapReduceと比較すると、中間ファイル作成などがない。<br/>
-・多目的なライブラリがあります。 -SparkSQLなど<br/>
-・APIが多様です。</p>
 
-<p>DeltaCubeではApathce Sparkで自動化し、クラスタリングしています。</p>
-]]></content>
-  </entry>
+  <span class="byline author vcard">Authored by <span class="fn">
   
-  <entry>
-    <title type="html"><![CDATA[Data Processing With Spark in R &amp; Python]]></title>
-    <link href="http://narusou.github.io/blog/2017/07/18/data-processing-with-spark-in-r-and-python/"/>
-    <updated>2017-07-18T14:57:39+09:00</updated>
-    <id>http://narusou.github.io/blog/2017/07/18/data-processing-with-spark-in-r-and-python</id>
-    <content type="html"><![CDATA[<h3>原文</h3>
-
-<p>I recently gave a talk on data processing with Apache Spark using R and Python. tl;dr – the slides and presentation can be accessed below:<br/>
-<a href="https://www.brighttalk.com/webcast/9059/172833">https://www.brighttalk.com/webcast/9059/172833</a></p>
-
-<!--more-->
-
-
-<p>As noted in my previous post, Spark has become the defacto standard for big data applications   and has been adopted quickly by the industry. See Cloudera’s  One Platform initiative blog post by CEO Mike Olson for their commitment to Spark.　In data science R had seen rapid adoption, not only because it was open source and free   compared to costly SAS, but also the huge number of statistical and graphical packages provided　by R for data science. The most popular ones of course are the ones from Hadley Wickham (dplyr,　ggplot2, reshape2, tidyr and more). On the other hand, Python had seen rapid adoption among　developers and engineers due to its being useful to script big data tasks along with data　analysis with the help of packages like pandas, scikit-learn, NumPy, SciPy, matplotlib etc.　and also the popular iPython &amp; later Jupyter notebooks.　</p>
-
-<p>There are numerous posts strewn on the net picking fights between R and Python. However it is quite usual for any big data and data science shop to have developers and data scientists who use either or both these tools. Spark makes it easy for both communities to leverage the power of Hadoop and distributed processing systems with its own APIs like DataFrames which can be used in a polyglot fashion. Therefore it is essential for any data enthusiast to learn about how data processing in Spark can be done using R or Python.</p>
-
-<h3>翻訳</h3>
-
-<p>最近、RとPythonを使用したApatche Sparkによるデータプロセスに関して話をした。下記のURLからスライドとプレゼンテーションにアクセス可能。</p>
-
-<p><a href="https://www.brighttalk.com/webcast/9059/172833">https://www.brighttalk.com/webcast/9059/172833</a></p>
-
-<p>過去の投稿にあるように、Sparkはビックデータアプリケーションの事実上のスタンダードになり、また急速にBI業界に取り入れられた経緯がある。CEO Mike Olsonによる彼らのSparkへのコミットメントに関するブログ投稿を参照。
-データサイエンスに関して、RはコストがかかるSASに比べてフリーでオープンソースであるという理由のみならず、データサイエンスのために用意された統計的でグラフィカルな数多くのパッケージによって急速に普及してきた。もっともよく知られている事例としてはHadley Wickham(dplyr, ggplot2, reshape2, tidyr and more)による。一方、Pythonは開発者とエンジニアの間で、pandasやscikit-learn、NumPy, SciPy,matplotlibとかのようなパッケージによってデータアナリシスにおけるビッグデータのタスクを記述するのに便利であるため急速に採用されてきた。そして、iPython, 後期のJupiter notebooksによるものがよく知られている。</p>
-
-<p>非常に多くのRとPythonに関する両社の批判や議事が散らばった投稿として見受けられる。しかし、これらを同時に両方、もしくは二種類を使用するデータサイエンティストと開発者達を保有するのはデータサイエンスやビッグデータを生業にするものにとってはかなり普通のことと思われる。SparkはHadoopの力と、多言語仕様で使用することが出来るデータフレームのようなSparkのAPIと、それを使用した分散処理プロセスシステムを、この両者のコミュニティが利用することを簡単にする。こういった背景から、RとPyhonによるSparkが行うデータプロセスがどのようなものなのかを学ぶことはデータマニアにとっては必要不可欠なことだと思われる。</p>
-
-<h3>出典</h3>
-
-<p><a href="https://biguru.wordpress.com/2015/11/18/data-processing-with-spark-in-r-python/">https://biguru.wordpress.com/2015/11/18/data-processing-with-spark-in-r-python/</a></p>
-]]></content>
-  </entry>
+    Souichi Narumiya
   
-  <entry>
-    <title type="html"><![CDATA[Translation1]]></title>
-    <link href="http://narusou.github.io/blog/2017/07/18/translation1/"/>
-    <updated>2017-07-18T14:56:11+09:00</updated>
-    <id>http://narusou.github.io/blog/2017/07/18/translation1</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
+  </span></span>
+
+
+      
+
+
+
+
+<time class='entry-date' datetime='2017-07-19T13:10:55+09:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>19</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>1:10 pm</span></time>
+      
+      
+
+
+    </p>
+    
+      <div class="sharing">
   
-  <entry>
-    <title type="html"><![CDATA[Test]]></title>
-    <link href="http://narusou.github.io/blog/2017/07/15/test/"/>
-    <updated>2017-07-15T22:20:27+09:00</updated>
-    <id>http://narusou.github.io/blog/2017/07/15/test</id>
-    <content type="html"><![CDATA[<p>This site is created for my practice to develop homepages and traslate articles about Business Intelligence.</p>
-
-<!--more-->
-
-
-<p><img src="http://narusou.github.io/images/test.png" alt="test" /></p>
-
-<h2>環境</h2>
-
-<p>PC:HPchromebook<br/>
-OS:Google Chrome and UBUNTU 14.04 LTS</p>
-
-<h2>OctPressをGITHUBにdeployするためにしたこと</h2>
-
-<pre><code>1,githubにブランチ作成
-2,rbenvのインストール
-3,rubｙのインストール
-4,githubとlocalの同期
-5,rakeで記事の作成
-6,generate, deploy
-</code></pre>
-
-<h2>躓いた点</h2>
-
-<p> ・rubyとrbenv versionの整理<br/>
- ・git pull</p>
-
-<h2>使用したコード 順不同</h2>
-
-<pre><code>$ rake deploy
-$ rake generate
-$ ruby -v
-$ ruby --version
-$ rbenv versions
-$ rbenv version
-$ source ~/.bash_profile
-$ echo $PATH
-$ which ruby
-$ which rbenv
-$ rbenv init
-$ rbenv global 2.4.1
-$ bundle exec 
-$ git pull
-$ git push
-$ git commit
-$ sudo apt-get install ruby
-$ sudo apt-get install git
-$ git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
-$ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' &gt;&gt; ~/.profile
-$ echo 'eval "$(rbenv init -)"' &gt;&gt; ~/.profile
-$ exec $SHELL -l
-$ rbenv install -l
-$ rbenv install 2.4.1
-$ rbenv exec gem install bundler
-$ rbenv rehash
-$ git clone git://github.com/imathis/octopress.git octopress
-$ cd octopress
-$ bundle install --path vendor/bundle
-$ git clone git://github.com/lucaslew/whitespace.git .themes/whitespace
-$ rake install['whitespace'] # for zsh, use: rake install\['whitespace'\]
-$ rake new_post['test']
-$ rake preview
-$ rake setup_github_pages
-</code></pre>
-]]></content>
-  </entry>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://narusou.github.io/blog/2017/07/19/what-roles-do-you-need-in-your-data-science-team/" data-via="" data-counturl="http://narusou.github.io/blog/2017/07/19/what-roles-do-you-need-in-your-data-science-team/" >Tweet</a>
   
-  <entry>
-    <title type="html"><![CDATA[First_test]]></title>
-    <link href="http://narusou.github.io/blog/2017/07/15/first-test/"/>
-    <updated>2017-07-15T21:36:23+09:00</updated>
-    <id>http://narusou.github.io/blog/2017/07/15/first-test</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
   
-</feed>
+  
+    <div class="fb-like" data-layout="button_count" data-send="false" data-width="300" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2017/07/18/study-and-memo-about-apatche-spark/" title="Previous Post: Study and memo about Apatche Spark">&laquo; Study and memo about Apatche Spark</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2017/07/21/data-science-project-life-cycle/" title="Next Post: data science project life-cycle">data science project life-cycle &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+
+</div>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2017 - Souichi Narumiya -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a> | Themed with <a href="https://github.com/lucaslew/whitespace">Whitespace</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/all.js#appId=1735411246487943&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

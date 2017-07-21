@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://narusou.github.io/blog/2017/07/21/data-science-project-life-cycle/</loc>
+<lastmod>2017-07-21T14:49:44+09:00</lastmod>
+</url>
+<url>
+<loc>http://narusou.github.io/blog/2017/07/19/what-roles-do-you-need-in-your-data-science-team/</loc>
+<lastmod>2017-07-19T13:10:55+09:00</lastmod>
+</url>
+<url>
 <loc>http://narusou.github.io/blog/2017/07/18/study-and-memo-about-apatche-spark/</loc>
 <lastmod>2017-07-18T18:36:43+09:00</lastmod>
 </url>

@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Data Science Project Life-cycle - BI blog 4U</title>
+  <meta name="author" content="Souichi Narumiya">
+
+  
+  <meta name="description" content="原文 The data science project lifecycle How does the typical data science project life-cycle look like?
+This post looks at practical aspects of &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://narusou.github.io/blog/2017/07/21/data-science-project-life-cycle">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="BI blog 4U" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
+<!--- MathJax Configuration -->
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <meta property="og:title" content="data science project life-cycle - BI blog 4U" />
+<meta property="og:description" content="原文 The data science project lifecycle How does the typical data science project life-cycle look like?
+This post looks at practical aspects of &hellip;" />
+<meta property="og:url" content="http://narusou.github.io/blog/2017/07/21/data-science-project-life-cycle/" />
+<meta property="og:image" content="http://narusou.github.io" />
+<meta property="og:author" content="Souichi Narumiya" />
+<meta property="og:site_name" content="BI blog 4U" />
+<meta property="og:locale" content="ja_JP" />
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="1735411246487943" />
+
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">BI blog 4U</a></h1>
+  
+    <h2>articles and translations</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscribe" data-subscription="rss email">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewbox="0 0 100 100"><path class="social" d="M 13.310204,73.332654 C 5.967347,73.332654 0,79.322448 0,86.621428 c 0,7.338776 5.967347,13.262246 13.310204,13.262246 7.370408,0 13.328572,-5.92245 13.328572,-13.262246 0,-7.29898 -5.958164,-13.288774 -13.328572,-13.288774 z M 0.01530612,33.978572 V 53.143878 C 12.493878,53.143878 24.229592,58.02347 33.068368,66.865306 41.894898,75.685714 46.767346,87.47449 46.767346,100 h 19.25 C 66.017346,63.592858 36.4,33.979592 0.01530612,33.978572 l 0,0 z M 0.03877552,0 V 19.17449 C 44.54796,19.17551 80.77551,55.437756 80.77551,100 H 100 C 100,44.87653 55.15102,0 0.03877552,0 z"></path></svg></a></li>
+  
+    <li><a href="narumiyasouichi@yahoo.co.jp" rel="subscribe-email" title="subscribe via email" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="25" viewbox="0 0 100 100"><path class="social" d=""m 154.85133,65.376619 -18.75652,19.018743 60.02087,0 -18.75653,-19.018743 -11.25391,14.264058 z m 48.76696,-33.282799 -22.50783,28.528113 22.50782,23.773429 z m -75.02609,0 0,52.301542 c 0,0 20.70458,-21.967007 22.50783,-23.773429 z m 7.50261,-2e-6 30.01043,38.037487 30.01044,-38.037487 z""></path></svg></a></li>
+  
+</ul>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      <form action="https://www.google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="sitesearch" value="narusou.github.io" />
+    
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">Data Science Project Life-cycle</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2017-07-21T14:49:44+09:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2017</span></span> <span class='time'>2:49 pm</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h1>原文</h1>
+
+<h3>The data science project lifecycle</h3>
+
+<p>How does the typical data science project life-cycle look like?
+This post looks at practical aspects of implementing data science projects. It also assumes a certain level of maturity in big data (more on big data maturity models in the next post) and data science management within the organization. Therefore the life cycle presented here differs, sometimes significantly from purist definitions of ‘science’ which emphasize the hypothesis-testing approach. In practice, the typical data science project life-cycle resembles more of an engineering view imposed due to constraints of resources (budget, data and skills availability) and time-to-market considerations.
+The CRISP-DM model (CRoss Industry Standard Process for Data Mining) has traditionally defined six steps in the data mining life-cycle. Data science is similar to data mining in several aspects, hence there’s some similarity with these steps.</p>
+
+<p>The CRISP model steps are:
+1. Business Understanding
+2. Data Understanding
+3. Data Preparation
+4. Modeling
+5. Evaluation and
+6. Deployment</p>
+
+<p>Given a certain level of maturity in big data and data science expertise within the organization, it is reasonable to assume availability of a library of assets related to data science implementations. Key among these are:</p>
+
+<ol>
+<li>Library of business use-cases for big data/ data science applications</li>
+<li>Data requirements – business use case mapping matrix</li>
+<li>Minimum data quality requirements (test cases to ensure minimum level of data quality to ensure feasibility)</li>
+</ol>
+
+
+<p>In most organizations, data science is a fledgling discipline, hence data scientists (except those from actuarial background) are likely to have limited business domain expertise – therefore they need to be paired with business people and those with expertise in understanding the data. This helps data scientists gain or work together on steps 1 and 2 of the CRISM-DM model – i.e. business understanding and data understanding.The typical data science project then becomes an engineering exercise in terms of a defined framework of steps or phases and exit criteria, which allow making informed decisions on whether to continue projects based on pre-defined criteria, to optimize resource utilization and maximize benefits from the data science project. This also prevents the project from degrading into money-pits due to pursuing nonviable hypotheses and ideas.</p>
+
+<p>The data science life-cycle thus looks somewhat like:</p>
+
+<ol>
+<li>Data acquisition</li>
+<li>Data preparation</li>
+<li>Hypothesis and modeling</li>
+<li>Evaluation and Interpretation</li>
+<li>Deployment</li>
+<li>Operations</li>
+<li>Optimization</li>
+</ol>
+
+
+<p>Data Acquisition – may involve acquiring data from both internal and external sources, including social media or web scraping. In a steady state, data extraction and transfer routines would be in place, and new sources, once identified would be acquired following the established processes.</p>
+
+<p>Data preparation – Usually referred to as “data wrangling”, this step involves cleaning the data and reshaping it into a readily usable form for performing data science. This is similar to the traditional ETL steps in data warehousing in certain aspects, but involves more exploratory analysis and is primarily aimed at extracting features in usable formats.</p>
+
+<p>Hypothesis and modeling are the traditional data mining steps – however in a data science project, these are not limited to statistical samples. Indeed the idea is to apply machine learning techniques to all data. A key sub-step is performed here for model selection. This involves the separation of a training set for training the candidate machine-learning models, and validation sets and test sets for comparing model performances and selecting the best performing model, gauging model accuracy and preventing over-fitting.</p>
+
+<p>Steps 2 through 4 are repeated a number of times as needed; as the understanding of data and business becomes clearer and results from initial models and hypotheses are evaluated, further tweaks are performed. These may sometimes include Step 5 (deployment) and be performed in a pre-production or “limited” / “pilot” environment before the actual full-scale “production” deployment, or could include fast-tweaks after deployment, based on the continuous deployment model.</p>
+
+<p>Once the model has been deployed in production, it is time for regular maintenance and operations. This operations phase could also follow a target DevOps model which gels well with the continuous deployment model, given the rapid time-to-market requirements in big data projects. Ideally, the deployment includes performance tests to measure model performance, and can trigger alerts when the model performance degrades beyond a certain acceptable threshold.
+The optimization phase is the final step in the data science project life-cycle. This could be triggered by failing performance, or due to the need to add new data sources and retraining the model, or even to deploy improved versions of the model based on better algorithms.
+Agile development processes, especially continuous delivery lends itself well to the data science project life-cycle. As mentioned before, with increasing maturity and well-defined project goals, pre-defined performance criteria can help evaluate feasibility of the data science project early enough in the life-cycle. This early comparison helps the data science team to change approaches, refine hypothesis and even discard the project if the business case is nonviable or the benefits from the predictive models are not worth the effort to build it.</p>
+
+<h1>翻訳</h1>
+
+<h3>データサイエンスプロジェクトライフサイクル</h3>
+
+<p>典型的なデータサイエンスプロジェクトのライフサイクルはどのようなものか？
+この投稿では実装のデータサイエンスプロジェクトの実践的な側面をみていく。次の投稿においてはビッグデータ習熟モデルについて投稿するが、本投稿では習熟モデルと組織内でのデータサイエンスマネジメントのある水準を仮定していく。
+それゆえ、ここでプレゼンされるライフサイクルは、仮説検証を強調する科学の純粋な定義とは時として大幅に異なる。
+実践の中では、この典型的なデータサイエンスプロジェクトのライフサイクルは製品化までの完了期限への考慮、予算やデータと能力可用性のリソースに制限されたエンジニアの視点に共通項を持ち合わせる。</p>
+
+<p>このCRISM-DMモデル（CRoss Industry Standard Process for Data Mining）はデータマイニングのライフサイクルの中で伝統的に６つのステップに定義されている。データサイエンスは何点かの側面からデータマイニングに似ている、それゆえそこにはこれらのステップにおいてもいくつかの類似点がある。</p>
+
+<p>【CRISM-DMモデルのステップ】<br/>
+１、ビジネスへの理解<br/>
+２、データへの理解<br/>
+３、データの準備段階<br/>
+４、モデリング<br/>
+５、評価<br/>
+６、ディプロイ</p>
+
+<p>組織でのデータサイエンスの専門知識とビッグデータの習熟度の水準さえあれば、データサイエンスの実装に関係したアセットライブラリの可用性を仮定することはリーズナブルだといえる。</p>
+
+<p>【Key points】<br/>
+１、ビッグデータとデータサイエンスのアプリケーションに関してのビジネスユースケースのライブラリ<br/>
+２、データの要求-ビジネスユースケースのマッピングマトリクス<br/>
+３、最低限のデータ品質の要求（実行可能性を保障するデータ品質の最低限の水準を保証するテストケース）</p>
+
+<p>ほとんどの組織において、データサイエンスは生まれたての分野であり、結果としてデータサイエンティストたちは（数理のバックグラウンドを持っている者たちをのぞき）ビジネスについては専門知識が制限されているし、それゆえ彼らはビジネス側の人と組み、データに精通した専門知識とビジネス知識をペアにする必要がある。
+これはデータサイエンティストがCRISM－DMモデルのビジネス理解、データ理解といった１、２のステップに進むのを手助けし、協働することを手助けする。</p>
+
+<p>事前に定義された基準を基礎としてプロジェクトをつづけるかどうかの意思決定をさせるような、リソース利用の最適化とデータサイエンスプロジェクトの有益性を最大化するような完了標準と、フェーズやステップの定義されたフレームワークに関して、この典型的なデータサイエンスのプロジェクトはエンジニアリングの実践演習になる。
+これはまたプロジェクトがあり得ない仮説と考えを追いかける金食い虫に成り下がることを防止する。
+このデータサイエンスのライフサイクルはそれゆえ、いくらか下記のように見える。</p>
+
+<p>１、データ獲得<br/>
+２、データ準備<br/>
+３、仮説とモデリング<br/>
+４、評価と解釈<br/>
+５、ディプロイ<br/>
+６、運用<br/>
+７、最適化</p>
+
+<p>データ獲得-ウェブスクレイピングやソーシャルメディアを含む内部と外部のデータソース、両方からのデータ獲得を意味している。安定した状態では、データのエクストラクションと移動のルーティンが実行され、新しいソースが確認され次第、打ち立てられたプロセスに従って取得される。</p>
+
+<p>データ準備-データラングリングとして参照され、データのクリーニングとデータサイエンスのパフォーマンスのために容易に利用できる形に落とし込むステップを含んでいる。</p>
+
+<p>これはデータウェアハウスの側面における伝統的なETLのステップに似ているが、より予備的な分析と主に利用可能なフォーマットの中ではエクストラクトの特徴を狙いとしている。</p>
+
+<p>仮説とモデリング-これは伝統的なデータマイニングのステップであり、しかしながらデータサイエンスのプロジェクトではこれらは統計的なサンプルデータに限定されていない。実際には、この考えは機械学習の技術をすべてのデータに適用するためにある。カギになるサブステップがここでモデルの選択のためになされる。<br/>
+これは機械学習のモデル候補のトレーニングセットの分割を含み、また最高のパフォーマンスを出すモデルパフォーマンスの選択とモデルの正確さを図り、過学習を防ぐ。</p>
+
+<p>ステップ２から４は必要に応じて何回も繰り返される、というのもビジネスとデータの理解がよりクリアになり、最初のモデルと仮説から評価され、さらに微調整も行われるためだ。継続移設モデル（continuous deployment model）をもとに、これらは時折、実際のフルスケールの本番環境にdeploymentされる前に、限定された、もしくはパイロット環境、プレ本番環境でステップ5（deployment）を行うことも含み、deploymentのあとの即時調整も含みうる。</p>
+
+<p>一度このモデルが製品にdeploymentされると、定常業務と保守の時間がくる。この運用の段階もまた、ビッグデータのプロジェクトでの急な製品化への期限要求がくれば、継続移設モデル（continuous deployment model）と相性のいい対象のDevOpsに従いうる。理想的には、このdeploymentはモデルパフォーマンスをはかるためのパフォーマンステストを含み、このモデルパフォーマンスが許容できる閾値を超えて程度が低い時にはアラートを鳴らすことが出来ることだ。</p>
+
+<p>最適化の段階はデータサイエンスのライフサイクルにおいて最後の段階になる。この段階はパフォーマンスの落ち込みにより、もしくは新しいデータソースが追加されたためモデルの再トレーニングをしなければならないことにより、またはよりよいアルゴリズムを基にした改良されたより良いモデルのversionをdeployするために使われる。</p>
+
+<p>アジャイルのdeploymentプロセス、特に継続的なデリバリはそれ自身の多くをデータサイエンスプロジェクトのライフサイクルに貸し出している。以前にお話ししたように、熟練され、良く定義されたプロジェクトのゴール、事前に定義されたパフォーマンスの標準はそのライフサイクルの中の十分早い段階で実行可能性を評価することを手助けすることができる。この比較はデータサイエンスチームがアプローチを変更したり、仮説を再精製したり、予見されるモデルからの利益が組み上げる価値のないものだったりビジネスケースが育成不能なものであれば、プロジェクトを廃棄することでさえ早い段階で助けになる。</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+
+
+  <span class="byline author vcard">Authored by <span class="fn">
+  
+    Souichi Narumiya
+  
+  </span></span>
+
+
+      
+
+
+
+
+<time class='entry-date' datetime='2017-07-21T14:49:44+09:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2017</span></span> <span class='time'>2:49 pm</span></time>
+      
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://narusou.github.io/blog/2017/07/21/data-science-project-life-cycle/" data-via="" data-counturl="http://narusou.github.io/blog/2017/07/21/data-science-project-life-cycle/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-layout="button_count" data-send="false" data-width="300" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2017/07/19/what-roles-do-you-need-in-your-data-science-team/" title="Previous Post: What roles do you need in your data science team?">&laquo; What roles do you need in your data science team?</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+
+</div>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2017 - Souichi Narumiya -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a> | Themed with <a href="https://github.com/lucaslew/whitespace">Whitespace</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/all.js#appId=1735411246487943&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
