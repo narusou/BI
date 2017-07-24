@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>A Brief Intoroduction to Statistics - Part1 - BI blog 4U</title>
+  <meta name="author" content="Souichi Narumiya">
+
+  
+  <meta name="description" content="原文 A Brief Introduction to Statistics – Part 1
+Posted on October 28, 2014 | Leave a comment
+What is Statistics?
+Collected observations are called &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://narusou.github.io/blog/2017/07/24/a-brief-intoroduction-to-statistics-part1">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="BI blog 4U" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
+<!--- MathJax Configuration -->
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <meta property="og:title" content="A Brief Intoroduction to Statistics - Part1 - BI blog 4U" />
+<meta property="og:description" content="原文 A Brief Introduction to Statistics – Part 1
+Posted on October 28, 2014 | Leave a comment
+What is Statistics?
+Collected observations are called &hellip;" />
+<meta property="og:url" content="http://narusou.github.io/blog/2017/07/24/a-brief-intoroduction-to-statistics-part1/" />
+<meta property="og:image" content="http://narusou.github.io" />
+<meta property="og:author" content="Souichi Narumiya" />
+<meta property="og:site_name" content="BI blog 4U" />
+<meta property="og:locale" content="ja_JP" />
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="1735411246487943" />
+
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">BI blog 4U</a></h1>
+  
+    <h2>articles and translations</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscribe" data-subscription="rss email">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewbox="0 0 100 100"><path class="social" d="M 13.310204,73.332654 C 5.967347,73.332654 0,79.322448 0,86.621428 c 0,7.338776 5.967347,13.262246 13.310204,13.262246 7.370408,0 13.328572,-5.92245 13.328572,-13.262246 0,-7.29898 -5.958164,-13.288774 -13.328572,-13.288774 z M 0.01530612,33.978572 V 53.143878 C 12.493878,53.143878 24.229592,58.02347 33.068368,66.865306 41.894898,75.685714 46.767346,87.47449 46.767346,100 h 19.25 C 66.017346,63.592858 36.4,33.979592 0.01530612,33.978572 l 0,0 z M 0.03877552,0 V 19.17449 C 44.54796,19.17551 80.77551,55.437756 80.77551,100 H 100 C 100,44.87653 55.15102,0 0.03877552,0 z"></path></svg></a></li>
+  
+    <li><a href="narumiyasouichi@yahoo.co.jp" rel="subscribe-email" title="subscribe via email" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="25" viewbox="0 0 100 100"><path class="social" d=""m 154.85133,65.376619 -18.75652,19.018743 60.02087,0 -18.75653,-19.018743 -11.25391,14.264058 z m 48.76696,-33.282799 -22.50783,28.528113 22.50782,23.773429 z m -75.02609,0 0,52.301542 c 0,0 20.70458,-21.967007 22.50783,-23.773429 z m 7.50261,-2e-6 30.01043,38.037487 30.01044,-38.037487 z""></path></svg></a></li>
+  
+</ul>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      <form action="https://www.google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="sitesearch" value="narusou.github.io" />
+    
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">A Brief Intoroduction to Statistics - Part1</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2017-07-24T13:46:42+09:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>1:46 pm</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h3>原文</h3>
+
+<p>A Brief Introduction to Statistics – Part 1
+Posted on October 28, 2014 | Leave a comment
+What is Statistics?
+Collected observations are called data. Statistics is the study of how best to collect, analyze, and draw conclusions from data. Each observation in data is called a case. Characteristics of the case are called variables. With a matrix/table analogy, a case is a row while a variable is a column.
+Statistics - Correlation
+Statistics – Correlation (Courtesy: xkcd.com)
+Types of variables:
+Numerical– Can be discrete or continuous, and can take a wide range of numerical values.
+Categorical– Specific or limited range of values, usually called levels. Variables with natural ordering of levels are called ordinal categorical variables.
+A pair of variables are either related in some way (associated) or not (independent). No pair of variables is both associated and independent.
+Data collected in haphazard fashion are called anecdotal evidence. Such evidence may be true and veriﬁable, but it may only represent extraordinary cases.
+There are two main types of scientific data collection:
+Observational studies – collection of data without interfering with how the data has arisen. Can provide evidence of a naturally occurring association between variables, but by themselves, cannot show a causal connection.
+Experiments – randomized experiments, usually with an explanatory variableand a response variable are performed, often with a control group.
+In general, correlation does not imply causation, and causation can only be inferred from a randomized experiment.
+Types of sampling:
+Simple random sampling: Each subject in the population is equally likely to be selected.
+Stratified sampling: The population is first divided into homogeneous strata (subjects within each stratum are similar, but different across strata) followed by random sampling from within each stratum.
+Cluster sampling: The population is first divided into groups or clusters (subjects within each cluster are non-homogeneous, but clusters are similar to each other). Next a few clusters are randomly sampled followed by random sampling from within each cluster.
+Randomized experiments are generally built on four principles:
+Controlling – control any differences between groups for confounding variables which are known and can be accounted for.
+Randomization – randomize population into groups to account for variables that cannot be controlled.
+Replication – collect sufficiently large sample or replicate entire study to improve estimation.
+Blocking – advanced technique of grouping population based on variable known/suspected to influence response, followed by randomizing cases within the group.
+Reducing bias in experiments –
+Randomized experiments are the gold standard for data collection, but they do not ensure an unbiased perspective into the cause and eﬀect relationships in all cases. Blinding can help in overcoming placebo effect in human studies.
+Distributions of a numerical variable are described by shape, center and spread. The three most commonly used measures of center and spread are:
+center: mean (the arithmetic average), median (the midpoint), mode (the most frequent observation)
+spread: standard deviation (variability around the mean), range (max-min), interquartile range IQR (middle 50% of the distribution)
+An outlier is an observation that appears extreme relative to the rest of the data.
+A robust statistic (e.g. median, IQR) is a statistic that is not heavily affected by skewness and extreme outliers.
+Comparing categorical data:
+A table that summarizes data for two categorical variables in this way is called a contingency table. A table for a single variable is called a frequency table. A bar plot is a common way to display a single categorical variable. A segmented bar plot is a graphical display of contingency table information. A mosaic plot is a graphical display of contingency table information that is similar to a bar plot for one variable or a segmented bar plot when using two variables. While pie charts are well known, they are not typically as useful as other charts in a data analysis.
+Comparing numerical data:
+The side-by-side box plot is a traditional tool for comparing across groups. Another useful plotting method uses hollow histograms to compare numerical data across groups.
+Hypothesis test:
+H0 Independence model – Explanatory variable has no eﬀect on response variable, and we observed a diﬀerence that would only happen rarely.
+HA Alternative model – Explanatory variable has an eﬀect on response variable, and what we observed was actually due to explanatory variable effect on the response variable explaining the difference.
+Based on the simulations, we have two options:
+1. We conclude that the study results do not provide strong evidence against the independence model.
+2. We conclude the evidence is suﬃciently strong to reject H0 and assert the alternative hypothesis.
+When we conduct formal studies, usually we reject the notion that we just happened to observe a rare event. So in such a case, we reject the independence model in favor of the alternative.
+Statistical Inference:
+One ﬁeld of statistics, statistical inference, is built on evaluating whether such differences are due to chance. In statistical inference, statisticians evaluate which model is most reasonable given the data. Errors do occur, just like rare events, and we might choose the wrong model. While we do not always choose correctly, statistical inference gives us tools to control and evaluate how often these errors occur.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+
+
+  <span class="byline author vcard">Authored by <span class="fn">
+  
+    Souichi Narumiya
+  
+  </span></span>
+
+
+      
+
+
+
+
+<time class='entry-date' datetime='2017-07-24T13:46:42+09:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>1:46 pm</span></time>
+      
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://narusou.github.io/blog/2017/07/24/a-brief-intoroduction-to-statistics-part1/" data-via="" data-counturl="http://narusou.github.io/blog/2017/07/24/a-brief-intoroduction-to-statistics-part1/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-layout="button_count" data-send="false" data-width="300" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2017/07/24/designing-the-future-data-innovation-labs/" title="Previous Post: Designing the future -Data innovation LAbs">&laquo; Designing the future -Data innovation LAbs</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+
+</div>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2017 - Souichi Narumiya -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a> | Themed with <a href="https://github.com/lucaslew/whitespace">Whitespace</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/all.js#appId=1735411246487943&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Why Spark Is the Big Data Platform of the Future - BI blog 4U</title>
+  <meta name="author" content="Souichi Narumiya">
+
+  
+  <meta name="description" content="原文 Why Spark is the big data platform of the future
+Posted on March 23, 2015 | 1 Comment
+Apache Spark has created a lot of buzz recently. In fact, &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://narusou.github.io/blog/2017/07/24/why-spark-is-the-big-data-platform-of-the-future">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="BI blog 4U" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
+<!--- MathJax Configuration -->
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <meta property="og:title" content="Why Spark is the big data platform of the future - BI blog 4U" />
+<meta property="og:description" content="原文 Why Spark is the big data platform of the future
+Posted on March 23, 2015 | 1 Comment
+Apache Spark has created a lot of buzz recently. In fact, &hellip;" />
+<meta property="og:url" content="http://narusou.github.io/blog/2017/07/24/why-spark-is-the-big-data-platform-of-the-future/" />
+<meta property="og:image" content="http://narusou.github.io" />
+<meta property="og:author" content="Souichi Narumiya" />
+<meta property="og:site_name" content="BI blog 4U" />
+<meta property="og:locale" content="ja_JP" />
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="1735411246487943" />
+
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">BI blog 4U</a></h1>
+  
+    <h2>articles and translations</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscribe" data-subscription="rss email">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewbox="0 0 100 100"><path class="social" d="M 13.310204,73.332654 C 5.967347,73.332654 0,79.322448 0,86.621428 c 0,7.338776 5.967347,13.262246 13.310204,13.262246 7.370408,0 13.328572,-5.92245 13.328572,-13.262246 0,-7.29898 -5.958164,-13.288774 -13.328572,-13.288774 z M 0.01530612,33.978572 V 53.143878 C 12.493878,53.143878 24.229592,58.02347 33.068368,66.865306 41.894898,75.685714 46.767346,87.47449 46.767346,100 h 19.25 C 66.017346,63.592858 36.4,33.979592 0.01530612,33.978572 l 0,0 z M 0.03877552,0 V 19.17449 C 44.54796,19.17551 80.77551,55.437756 80.77551,100 H 100 C 100,44.87653 55.15102,0 0.03877552,0 z"></path></svg></a></li>
+  
+    <li><a href="narumiyasouichi@yahoo.co.jp" rel="subscribe-email" title="subscribe via email" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="25" viewbox="0 0 100 100"><path class="social" d=""m 154.85133,65.376619 -18.75652,19.018743 60.02087,0 -18.75653,-19.018743 -11.25391,14.264058 z m 48.76696,-33.282799 -22.50783,28.528113 22.50782,23.773429 z m -75.02609,0 0,52.301542 c 0,0 20.70458,-21.967007 22.50783,-23.773429 z m 7.50261,-2e-6 30.01043,38.037487 30.01044,-38.037487 z""></path></svg></a></li>
+  
+</ul>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      <form action="https://www.google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="sitesearch" value="narusou.github.io" />
+    
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">Why Spark Is the Big Data Platform of the Future</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2017-07-24T13:39:40+09:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>1:39 pm</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h3>原文</h3>
+
+<p>Why Spark is the big data platform of the future
+Posted on March 23, 2015 | 1 Comment
+Apache Spark has created a lot of buzz recently. In fact, beyond the buzz, Apache Spark has seen phenomenal adoption and has been marked out as the successor to Hadoop MapReduce.</p>
+
+<p>Google Trends confirms the hockey stick like growth in interest in Apache Spark.  All leading Hadoop vendors, including Cloudera, now include Apache Spark in their Hadoop distribution.</p>
+
+<p>So what exactly is Spark, and why has it generated such enthusiasm? Apache Spark is an open-source big data processing framework designed for speed and ease of use.  Spark is well-known for its in-memory performance, but that has also given rise to misconceptions about its on-disk abilities. Spark is in fact a general execution engine – which has a greatly improved performance both in-memory as well as on-disk, when compared with older frameworks like MapReduce. With its advanced DAG (directed acyclic graph) execution engine, Spark can run programs up to 100x faster than MapReduce in memory, or 10x faster on-disk. Why is Spark faster than MapReduce?</p>
+
+<pre><code>A key step during MapReduce operations is the synchronization or  “shuffle” step, intermediate between the “map”-step and the “reduce”-step. Apache Spark implements a sort-based shuffle design, which improves performance.
+Apache Spark also includes a DAG (directed-acyclic graph) which allow developers to execute DAGs all at once, not step by step. This eliminates the costly synchronization required by MapReduce. Note that DAGs are also used by Storm and Tez
+Spark supports in-memory data sharing across DAGs, so different jobs can work with the same data at a very high speed.
+</code></pre>
+
+<p>It’s important to remember that Hadoop is a decade-old technology, developed at a time when memory was still relatively expensive, and therefore took the design approach of persistence to disk as a way of maintaining state between execution steps. On the other hand, Spark was developed at UC Berkeley AMPLab in 2009 and then it was open-sourced in 2010 – when memory had become much cheaper. Therefore, Spark stores data in memory and transparently persists it to disk if needed, thereby achieving better performance. The core concept of Spark is this programming abstraction over data storage – called RDDs (Resilient Distributed Dataset). Under the hood, Spark automatically distributes the data contained in RDDs across the cluster and parallelizes the operations performed on them.</p>
+
+<p>The end result is that, on an average – the lines of code required to develop a distributed data processing program is much less in Spark, when compared with MapReduce. See more details on why Spark is the fastest open-source engine for sorting a petabyte. Clearly, faster execution has been one of the key reasons for the uptake of Spark, but Spark also provides further advantages. Similar to YARN, the upgrade of the Hadoop framework over the MapReduce-only version, Spark allows a wide range of workloads from batch to interactive and streaming. It reduces the burden of maintaining separate tools as in Hadoop – and provides APIs in Scala, Java, Python and SQL.  Spark can run over a variety of cluster-managers, including Hadoop YARN, Apache Mesos, and Spark’s own standalone scheduler. Spark components</p>
+
+<p>Spark Core – provides basic functionality of Apache Spark, including RDDs and APIs to manipulate them. Spark SQL – A new component which replaces the older Shark (SQL on Spark) project, this package provides better integration with Spark Core, it allows querying data through SQL and HiveQL and supports many data sources from Hive tables, Parquet and JSON. Spark SQL also allows developers to intermix SQL queries with the code for data manipulations with RDDs in Python, Java, and Scala. It also provides fast SQL connectivity to BI tools like Tableau or QlikView.</p>
+
+<p>Spark Streaming – based on micro-batching, this component enables processing of real-time streaming data. It uses DStreams, which are series of RDDs, to process real-time data. The Spark Streaming API is very similar to the Spark Core RDD APIs, making it easy for developers to reuse and adapt code for batch to interactive or real-time applications. MLlib – provides a library of machine learning algorithms including classification, regression, clustering, and collaborative filtering, as well as model evaluation and data import. GraphX – provides an API for graphs and graph-parallel computations and operators for manipulating graphs and a library of graph algorithms. The SparkR project aims to provide a light-weight front-end to use Apache Spark from R. Work is on to integrate SparkR into Spark. Recently, Spark has introduced a dataframe library with R/Pandas syntax for use across all of the Spark language APIs and an ML pipeline API which also integrates with data frames. Spark adoption is increasing manifold, boosted by increased third-part vendor support. Databricks – the company spun out of AMPLab by the creators of Apache Spark, now provides Spark as a service on the cloud – with its own Databricks Cloud – which is in private beta. The Databricks cloud is designed to support data science in the lab as well as in the factory – by creating polyglot notebooks (mix of Scala/Java/Python/SQL possible) and building production pipelines for ETL and analytics jobs. Tableau and MemSQL have provided Spark connectors, Altiscale now provides Spark in the cloud and machine learning vendors like Nube are building products like Reifier to perform entity resolution and de-duplication using Spark. ClearStory Data provides Spark-based data processing and analytics. There is also a fledgling community of packages for Apache Spark. Big data and data science projects are complex with an increasing diverse toolset which require massive integration efforts. Greater flexibility than that provided by MapReduce, capability to support a variety of workloads and a simpler, more unified ecosystem of tools which work out of the box on a general execution engine (Apache Spark) thus provide better simplicity than the complex zoo of Hadoop MapReduce projects. Together with SparkSQL and dataframes library, Spark democratizes access to distributed data processing beyond MapReduce programmers extending it to other developers and business analysts. Over and above, considering the fast performance of Spark, it is no wonder that Apache Spark continues to gain traction and looks all set to be the default framework for Big data processing in the near future. More info:</p>
+
+<pre><code>Spark record for fastest sort of a petabyte 
+Dataframes in SparkS
+</code></pre>
+
+<h3>翻訳</h3>
+
+<p>なぜSparkが未来のビッグデータプラットフォームなのか</p>
+
+<p>Apache Sparkが最近話題に上がってくることが多くなった。事実、そういった話題以上に、Apache SparkはHadoop MapReduceの後任として位置を確立し、また現象的な採用実績を誇っている。</p>
+
+<p>グーグルトレンドはApache Sparkへの関心がホッケースティック成長であることを確認している。Hadoopベンダーをリードする全て、Clouderaを含め、今やApache Sparkを彼らのHadoop分散技術に組み込んでいる。</p>
+
+<p>では、Apache Sparkとは一体何か。そして、なぜそんな熱心にもてはやされるのか？Apache Sparkはオープンソースのビッグデータ処理フレームワークで、使いやすさとスピードに特化してデザインされた。
+Apache Sparkはその内部メモリーによるパフォーマンスでよく知られ、しかしそのディスク上での能力について思い違いもまた生じている。スパークは事実としてはMApReduceのような古いフレームワークと比べられた時には、on-diskでもin-memoryでもとても改善されたパフォーマンスを発揮する総合実行エンジンだ。
+その高度な有効無閉路グラフ実行エンジンにより、Apache Sparkはin memoryで100x、on deskで10xのスピード以上でプログラムを走らせることが可能になっている。では、なぜApache SparkはMapReduceよりも速いのか。</p>
+
+<p>・MapReduceの場合、MapとReduceのステップの中間に、シャッフルステップ、もしくは同期の運用がキーステップとして存在している。Apache Sparkはパフォーマンスを改善するためにSort-based shuffleのデザインを実装している。
+・Apache Sparkは開発者にひとつづつではなく、一度にDAGsを実行させることがDAG (directed-acyclic graph)もまた実装している。これはMapReduceによって要求されるコストがかかる同期を取り除いてくれる。また、これはStormやTazでも使用されている。
+・Apache SparkはDAGsを介してのin-memoryデータシェアリングをサポートするので、同時にハイスピードで同じデータ上で違うジョブの稼働が可能になっている。</p>
+
+<p>Hadoopはメモリが依然として相対的に高価であったような10年前に開発された産物であることを思い出すことは重要であるし、それゆえ実行するステップの合間に保守状態の方法としてディスクに固執したアプローチのデザインを取っていた。
+一方、Sparkは2009年にバークレー大学でAMPラボで開発され、メモリがかなり安くなった2010年にOpenSourceになった。それゆえ、Sparkはメモリにデータを貯蔵し、必要であればディスクへ見える状態で入れておくこともする。これにより、よりよいパフォーマンスを達成している。</p>
+
+<p>SparkのCoreコンセプトはRDDs (Resilient Distributed Dataset)と呼ばれるデータストレージを覆うこのプログラミング抽象化にある。この屋根の元、Sparkはそれらの上で行われる平行した運用とクラスタを横断したRDDs (Resilient Distributed Dataset)の内部に含まれるを自動的に分散する。</p>
+
+<p>【Work-count code in Spark&rsquo;s Python API】
+file = spark.textfile(&ldquo;hdfs://&hellip;&rdquo;)
+file.flatfile(lamba line: line.split())
+.map(lamba word: (word, 1))
+.reduceByKey(lambda a, b: a+b)</p>
+
+<p>この最終結果は平均として、分散型のデータプロセスを行うプログラムを開発するのに要求されるコードの行はMapReduceと比較したときにSparkでは非常に少ない行となる。
+もっと詳しい説明に関しては下記を参照。
+<a href="https://databricks.com/blog/2014/10/10/spark-petabyte-sort.html">https://databricks.com/blog/2014/10/10/spark-petabyte-sort.html</a></p>
+
+<p>明らかにSparkの採用のための主要な理由の一つとしては速さが挙げられるが、Sparkはさらなる利点を供給する。YARN、HadoopフレームワークのupgradeはMapReduceのみのバージョンと似ていて、Sparkはバッチから対話とストリーミングへと広い幅の作業を許容している。
+これはHadoopのように別れたツールを保守するための負荷を減らしてくれ、SQLやPython, Java,ScalaのAPIを提供してくれる。SparkはApache Mesos、Haddop YARN、そしてSpark自身のスタンドアローンスケジューラ－を含む様々なクラスタマネージャーをくるみ稼働する。</p>
+
+<p>Spark Components</p>
+
+<p>Spark-components</p>
+
+<p>Spark Core- Apache SparkのRDDsと、それを操作するためのAPIを含む基本的な機能
+Spark SQL- 古いShark(SQL on Shark)のプロジェクトにとって代わる新しいコンポネント。このパッケージはShark Coreとのより良い統合を提供するパッケージで、ParquetやJSON、Hivのテーブルからの多くのデータソースをサポートし、SQLとHiveQLをとおしてデータをクエリすることを許容する。
+Spark SQLは開発者にPythonとJava、Scalaの内部でRDDsによるデータ操作のためのコードとSQLのクエリを混ぜることもさせる。これはまたTableauやQlick ViewなどのBItoolへの速いSQL接続を提供する。
+Spark Streaming- マイクロバッチングをベースにして、このコンポネントはリアルタイムデータストリーミングのプロセスを利用可能としている。これはリアルタイムデータプロセスをするために、RDDsのシリーズであるDStreamsを使用している。
+Spark Streaming APIは開発者にリアルタイムアプリ、もしくは対話形式のアプリへのバッチのコードを再利用、改変を簡単にするSpark Core RDD APIsにとても似ている。
+MLib- 回帰、クラスタリング、分類、そして協調フィルタリング、データインポートとモデル評価をも含む機械学習のためのアルゴリズムライブラリを供給する。
+GraphX- グラフアルゴリズムのライブラリとグラフを操作するためのグラフ平行計算と演算子、グラフ自身のためのAPIを提供する。
+このSparkRプロジェクトはRからApache Sparkを使用するための軽いフロントエンドを提供することを目途としている。最近、SparkはR/Pandasのシンタクスでデータフレームライブラリを導入していて、R/Pandasのシンタクスは全てのSpark言語 APIと ML パイプラインAPIを通して使用でき、これらもまたデータフレームによって統合されている。Sparkの採用は多方面に広がっており、サードパーティーのベンダーサポートの増加によって加速している。Apache Sparkの製作者達によるAMPLabからのスピンアウト会社、Databricksは現在、Closedのベータ版    であるDatabricks自身のクラウド上でクラウドサービスとしてSparkを提供している。Databricksクラウドは多言語ノートブックス（可能なScala,Java,Python,SQLの混合）の制作と、ETLと分析の仕事のための製品経路をたてることによって、工場やラボでのデータサイエンスをサポートするためにデザインされた。TableauとMemAQLはSparkコネクタを提供し、Altiscaleは現在クラウドでSparkを提供している。そしてNubeのような機械学習のベンダーはSparkを使用してentity resolutionと重複削除を行うためのReifierのような製品を打ち立てている。Clear Story DataはSparkを基礎としたデータプロセスと分析を提供している。ここにはまた生まれたてのApache Sparkのためのパッケージのコミュニティーもまたある。ビッグデータとデータサイエンスのプロジェクトは巨大な統合のための努力が必要な多様化したツールセットの増加により、複雑だ。MapReduceによって供給されるもより素晴らしい柔軟性、作業と簡単さのバラエティをサポートする許容性、一般実行エンジン上のボックスを動かす、より一元化されたツールの環境システム。それゆえ、Hadoop MapReduceプロジェクトの複雑な動物園よりも、よりよい単純さというものを提供している。SparkSQLとデータフレームライブラリとともに、MapReduceのプログラマーだけでなく、ビジネスアナリストや他のプログラマーたちにも分散データプロセスへのアクセスへの参政権をSparkは 与えている。以上より、Sparkの速いパフォーマンスを考慮すると、近い将来にビッグデータプロセスのための全てのデフォルトフレームワークに、そして牽引し続けていっても不思議ではない。</p>
+
+<p>詳細情報
+<a href="https://databricks.com/blog/2014/11/05/spark-officially-sets-a-new-record-in-large-scale-sorting.html">https://databricks.com/blog/2014/11/05/spark-officially-sets-a-new-record-in-large-scale-sorting.html</a>
+<a href="https://spark.apache.org/docs/latest/sql-programming-guide.html#dataframes">https://spark.apache.org/docs/latest/sql-programming-guide.html#dataframes</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+
+
+  <span class="byline author vcard">Authored by <span class="fn">
+  
+    Souichi Narumiya
+  
+  </span></span>
+
+
+      
+
+
+
+
+<time class='entry-date' datetime='2017-07-24T13:39:40+09:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>1:39 pm</span></time>
+      
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://narusou.github.io/blog/2017/07/24/why-spark-is-the-big-data-platform-of-the-future/" data-via="" data-counturl="http://narusou.github.io/blog/2017/07/24/why-spark-is-the-big-data-platform-of-the-future/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-layout="button_count" data-send="false" data-width="300" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2017/07/24/An%20introduction%20to%20Data%20Science/" title="Previous Post: An introduction to Data Science">&laquo; An introduction to Data Science</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2017/07/24/a-gentle-introduction-to-machine-learning/" title="Next Post: A gentle introduction to Machine Learning">A gentle introduction to Machine Learning &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+
+</div>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2017 - Souichi Narumiya -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a> | Themed with <a href="https://github.com/lucaslew/whitespace">Whitespace</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/all.js#appId=1735411246487943&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

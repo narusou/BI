@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>A Gentle Introduction to Machine Learning - BI blog 4U</title>
+  <meta name="author" content="Souichi Narumiya">
+
+  
+  <meta name="description" content="原文 A gentle introduction to Machine Learning
+Posted on February 5, 2015 | Leave a comment
+Machine Learning is a big part of big data and data science &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://narusou.github.io/blog/2017/07/24/a-gentle-introduction-to-machine-learning">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="BI blog 4U" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
+<!--- MathJax Configuration -->
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <meta property="og:title" content="A gentle introduction to Machine Learning - BI blog 4U" />
+<meta property="og:description" content="原文 A gentle introduction to Machine Learning
+Posted on February 5, 2015 | Leave a comment
+Machine Learning is a big part of big data and data science &hellip;" />
+<meta property="og:url" content="http://narusou.github.io/blog/2017/07/24/a-gentle-introduction-to-machine-learning/" />
+<meta property="og:image" content="http://narusou.github.io" />
+<meta property="og:author" content="Souichi Narumiya" />
+<meta property="og:site_name" content="BI blog 4U" />
+<meta property="og:locale" content="ja_JP" />
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="1735411246487943" />
+
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">BI blog 4U</a></h1>
+  
+    <h2>articles and translations</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscribe" data-subscription="rss email">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewbox="0 0 100 100"><path class="social" d="M 13.310204,73.332654 C 5.967347,73.332654 0,79.322448 0,86.621428 c 0,7.338776 5.967347,13.262246 13.310204,13.262246 7.370408,0 13.328572,-5.92245 13.328572,-13.262246 0,-7.29898 -5.958164,-13.288774 -13.328572,-13.288774 z M 0.01530612,33.978572 V 53.143878 C 12.493878,53.143878 24.229592,58.02347 33.068368,66.865306 41.894898,75.685714 46.767346,87.47449 46.767346,100 h 19.25 C 66.017346,63.592858 36.4,33.979592 0.01530612,33.978572 l 0,0 z M 0.03877552,0 V 19.17449 C 44.54796,19.17551 80.77551,55.437756 80.77551,100 H 100 C 100,44.87653 55.15102,0 0.03877552,0 z"></path></svg></a></li>
+  
+    <li><a href="narumiyasouichi@yahoo.co.jp" rel="subscribe-email" title="subscribe via email" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="25" viewbox="0 0 100 100"><path class="social" d=""m 154.85133,65.376619 -18.75652,19.018743 60.02087,0 -18.75653,-19.018743 -11.25391,14.264058 z m 48.76696,-33.282799 -22.50783,28.528113 22.50782,23.773429 z m -75.02609,0 0,52.301542 c 0,0 20.70458,-21.967007 22.50783,-23.773429 z m 7.50261,-2e-6 30.01043,38.037487 30.01044,-38.037487 z""></path></svg></a></li>
+  
+</ul>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      <form action="https://www.google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="sitesearch" value="narusou.github.io" />
+    
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">A Gentle Introduction to Machine Learning</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2017-07-24T13:42:30+09:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>1:42 pm</span></time>
+        
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h3>原文</h3>
+
+<p>A gentle introduction to Machine Learning
+Posted on February 5, 2015 | Leave a comment
+Machine Learning is a big part of big data and data science. A subset of artificial intelligence – a branch of science notorious for requiring advanced knowledge of mathematics. In practice though, most data scientists don’t try to build a Chappie  and there are simpler, practical ways to get started with machine learning.
+Gmail Priority Inbox
+Gmail Priority Inbox
+Machine learning in practice involves predictions based on data. Notable examples include Amazon’s product recommendations with the “customers also bought” scroll-list, or Gmail’s priority inbox or any email spam-filter feature. How do these work? For Amazon, clicks by the user is used to learn and predict user behavior and propensity (likelihood) to buy certain items. The items the user is most likely to buy are then displayed on the recommendation system. Gmail’s system learns from the messages which the user reads and/replies to and prioritizes them.
+Amazon Recommendations
+Amazon Recommendations
+In both cases, there are some predictions made based on certain example usage of the data. Thus in essence, machine learning is about predictions based on models, which themselves are created based on examples.
+More specifically, a machine learning model is a set of explanations of the relationships between the input data and the output predictions. These relationships are discovered from examples of input-output pairs. In machine learning terminology, the input data is also called features and the predictions are called output. Once a model has been created, it can be used on new inputs to predict outputs.
+Machine learning models therefore “learn” to predict from examples. This learning is also known as “training” the model, and the associated good quality data-set is called “training data-set“. The stage where the model is used on new inputs is known as “testing” the model, and the data-set associated with it is called “test data-set“.
+There are different ways to perform this learning, with different types of algorithms to build models and perform predictions. Most common among these are Classification and Regression techniques. The Gmail spam-filter is an example of Classification technique. Given a set of emails marked as spam or not-spam, it learns the characteristics of emails and is then able to process future email messages to mark them as spam or not. Classification deals with prediction of which class ordinal data fits in, while regression deals with prediction of continuous numeric data. Example of regression is a best-fit line drawn through some data points for generalization. Both classification and regression are examples of supervised learning, as the algorithm is told to predict a label or target value.
+The opposite of this is unsupervised learning – where there’s no label or target value given for the data. An example of this could be clustering – a task of grouping a items so that objects in the same group or cluster are more similar (in some sense or another) to each other than to those in other groups (clusters).
+Machine Learning Techniques
+Machine Learning Techniques
+With so many choices, how do you choose the right algorithm? Without considering nuances of the data, a rule of thumb is to look at the objective of the prediction:</p>
+
+<pre><code>If the prediction is to forecast a target value, we use supervised learning, else use unsupervised learning or density estimation algorithms.
+</code></pre>
+
+<p>It is important to note though, that this is not unbreakable, rather usage of algorithms is rather fuzzy. This is quite common in machine learning, where most problems are not deterministic in nature, and often a bunch of different algorithms are tried out to see how they perform. There are also ensemble models like Gradient Boosting – a regression technique which  uses an ensemble of weak prediction models, typically decision trees to get an improved prediction model. An interesting tool based on symbolic regression, which infers the model from the data is Nutonian Eureqa, also dubbed as the robotic data scientist.
+Many algorithms are different, but the steps to use one are similar:
+Collect data > Prepare data > Analyze input data > Clean data/verify data quality > Train the algorithm > Test the algorithm > Iterate/Deploy. (See also my earlier post on the data science project lifecycle)
+As with many other aspects (data wrangling) of data science, both R and Python are very popular languages for using machine learning techniques. There are also start-ups like BigML providing MLaaS or Machine Learning as a Service.
+In conclusion of this post, a few points to remember: garbage in – garbage out:- data quality matters as much if not more than algorithms, quantity of data or complexity of algorithm are not substitutes for quality, and of course as with all predictions, machine learning can be wrong as well.</p>
+
+<h3>翻訳</h3>
+
+<p>機械学習への優しい導入</p>
+
+<p>ビッグデータの大部分である機械学習といえる。人工知能の一部で、高度の数学知識を求める悪名高い科学の部門として知られている。実践では、ほとんどのデータサイエンティストはChappieを作成しようとはせず、機械学習を始めるのにより簡単で実践的な方法がある。
+機械学習は実践としてはデータをベースにした予測を伴っている。アマゾンのcustomer also boughtの商品推薦スクロール、Gmailの優先順位、スパムフィルターの特性を持つEmail等が目立った例として挙げられる。これらはどうやって動いているのか。
+アマゾンの場合にはユーザーによるクリックによって学ばれ、そのユーザーの動きや、あるアイテムを買う傾向を予知している。このユーザーに買われそうなアイテムは、そうして推薦システム上にディスプレイされる。
+Gmailのシステムはユーザーが読んだ、返事したメッセージから情報を学び、それらを優先順位付けする。</p>
+
+<p>両方の場合でも、データの例示された確かな使用を基礎に予見がなされている。それゆえ主要な点として、予見に関する機械学習は例を基礎として作成されたモデルを基にしている。
+さらに具体 的には、機械学習モデルはインプットされたデータとアウトプットされた予見の間の関係に対する纏まった説明であるともいえる。</p>
+
+<p>これらはインプットとアウトプットのペアの例から発見されている。機械学習の技術では、インプットはfeatures[特徴]とよばれ、アウトプットはpredictions[予想]と呼ばれている。一度モデルが作られると、新しいインプットからアウトプットを予想するために使用される。
+機械学習モデルは例から予想するために「学習」する。この学習はまた、モデルの「訓練」として知られており、この関連したよい品質のデータセットは「トレーニングデータセット」として呼ばれている。
+新しいインプットの上でモデルが使用される段階はモデルを「テストする」としてしられており、これらに関連するデータセットは「テストデータセット」として知られている。</p>
+
+<p>ここにはこの学習を実行するための異なる方法がいくつかある。これらの中でもっともよく知られているのは、「分類」と「回帰」の技術だ。Gmail Spam Filterは「分類」の技術の一例になる。スパムかそうでないのかといったマークがつけられたEmailのセットが与えられると、Emailの特徴を学び、そうすると未来のemailメッセージをスパムかそうでないかをマークするプロセスが可能になる。「分類」はどの分類普遍データがふさわしいかの予想を取り扱い、「回帰」は継続した数的なデータの予想を取り扱う。回帰の例は一般化のためのいくつかのデータポイントを通して導き出された最も適切な水準だ。分類も回帰も教師信号ありの学習の例で、目的の価値、もしくはラベルを予想するためのアルゴリズムとして示されている。</p>
+
+<p>この反対が、教師信号なしの学習であり、そのデータのために与えられるような目的の値やラベルといったものはない。この例としてはクラスタリングが相当しうる。クラスタリングは項目をグルーピングするタスクで、同じグループ、もしくは他のクラスタの中の対象物はお互い、他のクラスタの内部の対象よりも（どこか、もしくは複数個所が）似ている。</p>
+
+<p>なぜこんなにも複数の選択があるのか？どうやってそのアルゴリズムを学ぶのか？データのニュアンスを考慮せずに、予想の目的に注目することが親指ルール（大まかなやり方）だ。</p>
+
+<p>・もしも対象の値を予想することが今回のpredictionであった場合には、私たちは教師あり信号を使用する。そうでなければ教師なし信号、密度見積もりアルゴリズムを使用する。</p>
+
+<p>これに気づくのは重要だが、それは絶対のルールではなく、むしろアルゴリズムの使用方法はかなりファジーだ。これは機械学習ではかなり普通のことで、自然界ではほとんどの問題は決定論的ではなく、それらがどういうものかを確認するために多くの違ったアルゴリズムが試される。
+またGradient Boostingのようなアンサンブルモデルもあり、弱い予見モデルのアンサンブルを使用した回帰技術を使用している。典型では、改善された予想モデルを取り入れるための意思決定ツリーのようなものがある。
+記号回帰を基礎としたデータからモデルを推量するNutonian Euraqaという興味深いツールも存在している。これはロボティックデータサイエンティストとも呼ばれている。</p>
+
+<p>多くのアルゴリズムがお互い異なり、一つのものを使うステップは似ている。</p>
+
+<p>１、データ集め
+２、データを準備
+３、入力データを分析
+４、データをクリア/データの品質を証明
+５、アルゴリズムを訓練
+６、アルゴリズムをテスト
+７、繰り返し、Deploy</p>
+
+<p>データサイエンスの多くの他の側面（データラングリング）により、RとＰｙｔｈｏｎは両方とも機械学習を利用するために人気のある言語だ。BigMLのようなMLaasやサービスとして機械学習を提供するスタートアップもある。</p>
+
+<p>この投稿の結論として、ゴミ入れ、ゴミ出し、そしてアルゴリズムの問題でなければ、データ品質の問題が多い。データ量やアルゴリズムの複雑さは品質の代わりには成り得ない。そしてもちろん、全ての予見、機械学習は間違いうるということだ。</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+
+
+  <span class="byline author vcard">Authored by <span class="fn">
+  
+    Souichi Narumiya
+  
+  </span></span>
+
+
+      
+
+
+
+
+<time class='entry-date' datetime='2017-07-24T13:42:30+09:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>1:42 pm</span></time>
+      
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://narusou.github.io/blog/2017/07/24/a-gentle-introduction-to-machine-learning/" data-via="" data-counturl="http://narusou.github.io/blog/2017/07/24/a-gentle-introduction-to-machine-learning/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-layout="button_count" data-send="false" data-width="300" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2017/07/24/why-spark-is-the-big-data-platform-of-the-future/" title="Previous Post: Why Spark is the big data platform of the future">&laquo; Why Spark is the big data platform of the future</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2017/07/24/designing-the-future-data-innovation-labs/" title="Next Post: Designing the future -Data innovation LAbs">Designing the future -Data innovation LAbs &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+
+</div>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2017 - Souichi Narumiya -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a> | Themed with <a href="https://github.com/lucaslew/whitespace">Whitespace</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/all.js#appId=1735411246487943&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
