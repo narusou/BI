@@ -151,10 +151,10 @@ Dataframes in SparkS
 
 <p>Apache Sparkが最近話題に上がってくることが多くなった。事実、そういった話題以上に、Apache SparkはHadoop MapReduceの後任として位置を確立し、また現象的な採用実績を誇っている。</p>
 
-<p>グーグルトレンドはApache Sparkへの関心がホッケースティック成長であることを確認している。Hadoopベンダーをリードする全て、Clouderaを含め、今やApache Sparkを彼らのHadoop分散技術に組み込んでいる。</p>
+<p>グーグルトレンドはApache Sparkへの関心がホッケースティック成長であることを確認している。Clouderaを含めて全てのHadoopを使うリードベンダーが今、やApache Sparkを彼らのHadoop分散技術に組み込んでいる。</p>
 
 <p>では、Apache Sparkとは一体何か。そして、なぜそんな熱心にもてはやされるのか？Apache Sparkはオープンソースのビッグデータ処理フレームワークで、使いやすさとスピードに特化してデザインされた。
-Apache Sparkはその内部メモリーによるパフォーマンスでよく知られ、しかしそのディスク上での能力について思い違いもまた生じている。スパークは事実としてはMApReduceのような古いフレームワークと比べられた時には、on-diskでもin-memoryでもとても改善されたパフォーマンスを発揮する総合実行エンジンだ。
+Apache Sparkはそのin-memoryによるパフォーマンスでよく知られ、しかしそのon-diskでの有能さについて思い違いも生じている。スパークは事実としてはMapReduceのような古いフレームワークと比べられた時には、on-diskでもin-memoryでもとても改善されたパフォーマンスを発揮する総合実行エンジンだ。
 その高度な有効無閉路グラフ実行エンジンにより、Apache Sparkはin memoryで100x、on deskで10xのスピード以上でプログラムを走らせることが可能になっている。では、なぜApache SparkはMapReduceよりも速いのか。</p>
 
 <p>・MapReduceの場合、MapとReduceのステップの中間に、シャッフルステップ、もしくは同期の運用がキーステップとして存在している。Apache Sparkはパフォーマンスを改善するためにSort-based shuffleのデザインを実装している。
@@ -164,7 +164,7 @@ Apache Sparkはその内部メモリーによるパフォーマンスでよく�
 <p>Hadoopはメモリが依然として相対的に高価であったような10年前に開発された産物であることを思い出すことは重要であるし、それゆえ実行するステップの合間に保守状態の方法としてディスクに固執したアプローチのデザインを取っていた。
 一方、Sparkは2009年にバークレー大学でAMPラボで開発され、メモリがかなり安くなった2010年にOpenSourceになった。それゆえ、Sparkはメモリにデータを貯蔵し、必要であればディスクへ見える状態で入れておくこともする。これにより、よりよいパフォーマンスを達成している。</p>
 
-<p>SparkのCoreコンセプトはRDDs (Resilient Distributed Dataset)と呼ばれるデータストレージを覆うこのプログラミング抽象化にある。この屋根の元、Sparkはそれらの上で行われる平行した運用とクラスタを横断したRDDs (Resilient Distributed Dataset)の内部に含まれるを自動的に分散する。</p>
+<p>SparkのCoreコンセプトはRDDs (Resilient Distributed Dataset)と呼ばれるデータストレージを覆っている、プログラミング抽象化にある。この屋根の元で、Sparkはそれらの上で行われる平行した運用とクラスタを横断したRDDs (Resilient Distributed Dataset)の内部に含まれる処理を自動的に分散する。</p>
 
 <p>【Work-count code in Spark&rsquo;s Python API】
 file = spark.textfile(&ldquo;hdfs://&hellip;&rdquo;)
@@ -172,25 +172,23 @@ file.flatfile(lamba line: line.split())
 .map(lamba word: (word, 1))
 .reduceByKey(lambda a, b: a+b)</p>
 
-<p>この最終結果は平均として、分散型のデータプロセスを行うプログラムを開発するのに要求されるコードの行はMapReduceと比較したときにSparkでは非常に少ない行となる。
-もっと詳しい説明に関しては下記を参照。
+<p>分散型のデータプロセスを行うプログラムを開発するのに要求されるコードの行数はMapReduceと比較した時にSparkでは非常に平均として、結果としては、少ない行数となる。</p>
+
+<p>もっと詳しい説明に関しては下記を参照。
 <a href="https://databricks.com/blog/2014/10/10/spark-petabyte-sort.html">https://databricks.com/blog/2014/10/10/spark-petabyte-sort.html</a></p>
 
-<p>明らかにSparkの採用のための主要な理由の一つとしては速さが挙げられるが、Sparkはさらなる利点を供給する。YARN、HadoopフレームワークのupgradeはMapReduceのみのバージョンと似ていて、Sparkはバッチから対話とストリーミングへと広い幅の作業を許容している。
-これはHadoopのように別れたツールを保守するための負荷を減らしてくれ、SQLやPython, Java,ScalaのAPIを提供してくれる。SparkはApache Mesos、Haddop YARN、そしてSpark自身のスタンドアローンスケジューラ－を含む様々なクラスタマネージャーをくるみ稼働する。</p>
-
-<p>Spark Components</p>
-
-<p>Spark-components</p>
+<p>明らかなSparkを採用する主要な理由の一つとしては、その速さが挙げられるが、Sparkはさらなる利点をもっている。
+YARN、HadoopフレームワークのupgradeはMapReduceのみのバージョンと似ていて、Sparkはバッチを起点とし、対話とストリーミングへと、広い幅の作業を許容している。
+これはHadoopのようにバラバラのツールを保守するための負荷を減じ、SQLやPython,Java,ScalaのAPIを与えてくれる。SparkはApache Mesos、Haddop YARN、そしてSpark自身のスタンドアローンスケジューラ－を含む様々なクラスタマネージャーをくるみ稼働する。</p>
 
 <p>Spark Core- Apache SparkのRDDsと、それを操作するためのAPIを含む基本的な機能
 Spark SQL- 古いShark(SQL on Shark)のプロジェクトにとって代わる新しいコンポネント。このパッケージはShark Coreとのより良い統合を提供するパッケージで、ParquetやJSON、Hivのテーブルからの多くのデータソースをサポートし、SQLとHiveQLをとおしてデータをクエリすることを許容する。
-Spark SQLは開発者にPythonとJava、Scalaの内部でRDDsによるデータ操作のためのコードとSQLのクエリを混ぜることもさせる。これはまたTableauやQlick ViewなどのBItoolへの速いSQL接続を提供する。
+Spark SQLは開発者にPythonとJava、Scalaの内部でRDDsによるデータ操作のためのコードとSQLのクエリを混ぜることもさせる。これはまた、TableauやQlick ViewなどのBItoolへのfastなSQL接続を提供する。
 Spark Streaming- マイクロバッチングをベースにして、このコンポネントはリアルタイムデータストリーミングのプロセスを利用可能としている。これはリアルタイムデータプロセスをするために、RDDsのシリーズであるDStreamsを使用している。
 Spark Streaming APIは開発者にリアルタイムアプリ、もしくは対話形式のアプリへのバッチのコードを再利用、改変を簡単にするSpark Core RDD APIsにとても似ている。
 MLib- 回帰、クラスタリング、分類、そして協調フィルタリング、データインポートとモデル評価をも含む機械学習のためのアルゴリズムライブラリを供給する。
 GraphX- グラフアルゴリズムのライブラリとグラフを操作するためのグラフ平行計算と演算子、グラフ自身のためのAPIを提供する。
-このSparkRプロジェクトはRからApache Sparkを使用するための軽いフロントエンドを提供することを目途としている。最近、SparkはR/Pandasのシンタクスでデータフレームライブラリを導入していて、R/Pandasのシンタクスは全てのSpark言語 APIと ML パイプラインAPIを通して使用でき、これらもまたデータフレームによって統合されている。Sparkの採用は多方面に広がっており、サードパーティーのベンダーサポートの増加によって加速している。Apache Sparkの製作者達によるAMPLabからのスピンアウト会社、Databricksは現在、Closedのベータ版    であるDatabricks自身のクラウド上でクラウドサービスとしてSparkを提供している。Databricksクラウドは多言語ノートブックス（可能なScala,Java,Python,SQLの混合）の制作と、ETLと分析の仕事のための製品経路をたてることによって、工場やラボでのデータサイエンスをサポートするためにデザインされた。TableauとMemAQLはSparkコネクタを提供し、Altiscaleは現在クラウドでSparkを提供している。そしてNubeのような機械学習のベンダーはSparkを使用してentity resolutionと重複削除を行うためのReifierのような製品を打ち立てている。Clear Story DataはSparkを基礎としたデータプロセスと分析を提供している。ここにはまた生まれたてのApache Sparkのためのパッケージのコミュニティーもまたある。ビッグデータとデータサイエンスのプロジェクトは巨大な統合のための努力が必要な多様化したツールセットの増加により、複雑だ。MapReduceによって供給されるもより素晴らしい柔軟性、作業と簡単さのバラエティをサポートする許容性、一般実行エンジン上のボックスを動かす、より一元化されたツールの環境システム。それゆえ、Hadoop MapReduceプロジェクトの複雑な動物園よりも、よりよい単純さというものを提供している。SparkSQLとデータフレームライブラリとともに、MapReduceのプログラマーだけでなく、ビジネスアナリストや他のプログラマーたちにも分散データプロセスへのアクセスへの参政権をSparkは 与えている。以上より、Sparkの速いパフォーマンスを考慮すると、近い将来にビッグデータプロセスのための全てのデフォルトフレームワークに、そして牽引し続けていっても不思議ではない。</p>
+このSparkRプロジェクトはRからApache Sparkを使用するための軽いフロントエンドを提供することを目途としている。最近、SparkはR/Pandasのシンタクスでデータフレームライブラリを導入していて、R/Pandasのシンタクスは全てのSpark言語 APIと ML パイプラインAPIを通して使用でき、これらもまたデータフレームによって統合されている。Sparkの採用は多方面に広がっており、サードパーティーのベンダーサポートの増加によって加速している。Apache Sparkの製作者達によるAMPLabからのスピンアウト会社、Databricksは現在、Closedのベータ版であるDatabricks自身のクラウド上でクラウドサービスとしてSparkを提供している。Databricksクラウドは多言語ノートブックス（可能なScala,Java,Python,SQLの混合）の制作と、ETLと分析の仕事のための製品経路をたてることによって、工場やラボでのデータサイエンスをサポートするためにデザインされた。TableauとMemAQLはSparkコネクタを提供し、Altiscaleは現在クラウドでSparkを提供している。そしてNubeのような機械学習のベンダーはSparkを使用してentity resolutionと重複削除を行うためのReifierのような製品を打ち立てている。Clear Story DataはSparkを基礎としたデータプロセスと分析を提供している。ここにはまた生まれたてのApache Sparkのためのパッケージのコミュニティーもまたある。ビッグデータとデータサイエンスのプロジェクトは巨大な統合のための努力が必要な多様化したツールセットの増加により、複雑だ。MapReduceによって供給されるもより素晴らしい柔軟性、作業と簡単さのバラエティをサポートする許容性、一般実行エンジン上のボックスを動かす、より一元化されたツールの環境システム。それゆえ、Hadoop MapReduceプロジェクトの複雑な動物園よりも、よりよい単純さというものを提供している。SparkSQLとデータフレームライブラリとともに、MapReduceのプログラマーだけでなく、ビジネスアナリストや他のプログラマーたちにも分散データプロセスへのアクセスへの参政権をSparkは 与えている。以上より、Sparkの速いパフォーマンスを考慮すると、近い将来にビッグデータプロセスのための全てのデフォルトフレームワークに、そして牽引し続けていっても不思議ではない。</p>
 
 <p>詳細情報
 <a href="https://databricks.com/blog/2014/11/05/spark-officially-sets-a-new-record-in-large-scale-sorting.html">https://databricks.com/blog/2014/11/05/spark-officially-sets-a-new-record-in-large-scale-sorting.html</a>
