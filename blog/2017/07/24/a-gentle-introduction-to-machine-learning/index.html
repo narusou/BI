@@ -11,7 +11,7 @@
   
   <meta name="description" content="原文 A gentle introduction to Machine Learning
 Posted on February 5, 2015 | Leave a comment
-Machine Learning is a big part of big data and data science &hellip;">
+Machine Learning is a big part of big data and data &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -40,7 +40,7 @@ Machine Learning is a big part of big data and data science &hellip;">
   <meta property="og:title" content="A gentle introduction to Machine Learning - BI blog 4U" />
 <meta property="og:description" content="原文 A gentle introduction to Machine Learning
 Posted on February 5, 2015 | Leave a comment
-Machine Learning is a big part of big data and data science &hellip;" />
+Machine Learning is a big part of big data and data &hellip;" />
 <meta property="og:url" content="http://narusou.github.io/blog/2017/07/24/a-gentle-introduction-to-machine-learning/" />
 <meta property="og:image" content="http://narusou.github.io" />
 <meta property="og:author" content="Souichi Narumiya" />
@@ -118,7 +118,10 @@ Machine Learning is a big part of big data and data science &hellip;" />
   </header>
 
 
-<div class="entry-content"><h3>原文</h3>
+<div class="entry-content"><!--more-->
+
+
+<h3>原文</h3>
 
 <p>A gentle introduction to Machine Learning
 Posted on February 5, 2015 | Leave a comment
@@ -126,8 +129,6 @@ Machine Learning is a big part of big data and data science. A subset of artific
 Gmail Priority Inbox
 Gmail Priority Inbox
 Machine learning in practice involves predictions based on data. Notable examples include Amazon’s product recommendations with the “customers also bought” scroll-list, or Gmail’s priority inbox or any email spam-filter feature. How do these work? For Amazon, clicks by the user is used to learn and predict user behavior and propensity (likelihood) to buy certain items. The items the user is most likely to buy are then displayed on the recommendation system. Gmail’s system learns from the messages which the user reads and/replies to and prioritizes them.
-Amazon Recommendations
-Amazon Recommendations
 In both cases, there are some predictions made based on certain example usage of the data. Thus in essence, machine learning is about predictions based on models, which themselves are created based on examples.
 More specifically, a machine learning model is a set of explanations of the relationships between the input data and the output predictions. These relationships are discovered from examples of input-output pairs. In machine learning terminology, the input data is also called features and the predictions are called output. Once a model has been created, it can be used on new inputs to predict outputs.
 Machine learning models therefore “learn” to predict from examples. This learning is also known as “training” the model, and the associated good quality data-set is called “training data-set“. The stage where the model is used on new inputs is known as “testing” the model, and the data-set associated with it is called “test data-set“.
@@ -150,31 +151,30 @@ In conclusion of this post, a few points to remember: garbage in – garbage out
 
 <p>機械学習への優しい導入</p>
 
-<p>ビッグデータの大部分である機械学習といえる。人工知能の一部で、高度の数学知識を求める悪名高い科学の部門として知られている。実践では、ほとんどのデータサイエンティストはChappieを作成しようとはせず、機械学習を始めるのにより簡単で実践的な方法がある。
-機械学習は実践としてはデータをベースにした予測を伴っている。アマゾンのcustomer also boughtの商品推薦スクロール、Gmailの優先順位、スパムフィルターの特性を持つEmail等が目立った例として挙げられる。これらはどうやって動いているのか。
-アマゾンの場合にはユーザーによるクリックによって学ばれ、そのユーザーの動きや、あるアイテムを買う傾向を予知している。このユーザーに買われそうなアイテムは、そうして推薦システム上にディスプレイされる。
-Gmailのシステムはユーザーが読んだ、返事したメッセージから情報を学び、それらを優先順位付けする。</p>
+<p>ビッグデータの大部分である機械学習は、人工知能の一部で、高度の数学知識を要求する悪名高い科学の一部門として知られている。実践では、ほとんどのデータサイエンティストはChappieを作成しようとはしない。機械学習を始めるのにはより簡単で実践的な方法がある。
+実践の機械学習はデータをベースにした予測を伴っている。アマゾンの「customer also bought」の商品推薦スクロール、Gmailの優先順位、スパムフィルターの特性を持つEmail等が目立った例として挙げられる。これらはどうやって動いているのか。
+アマゾンの場合にはユーザーによるクリックによって学習され、そのユーザーの動きや、あるアイテムを買う傾向を予知している。このユーザーに買われそうなアイテムは、そうして推薦システム上にディスプレイされる。Gmailのシステムはユーザーが「読んだ」、「返事したメッセージ」から情報を学び、それらを優先順位付けする。</p>
 
-<p>両方の場合でも、データの例示された確かな使用を基礎に予見がなされている。それゆえ主要な点として、予見に関する機械学習は例を基礎として作成されたモデルを基にしている。
-さらに具体 的には、機械学習モデルはインプットされたデータとアウトプットされた予見の間の関係に対する纏まった説明であるともいえる。</p>
+<p>両方とも、データが例示された確実に使用されたものを基礎に予測がなされている。それゆえ主要な点として、予想に関する機械学習は、それらの例を基礎として作成されたモデルを基にしている。さらに具体的には、機械学習モデルはインプットされたデータとアウトプットされた予測の間の関係に対する纏まった説明であるともいえる。</p>
 
-<p>これらはインプットとアウトプットのペアの例から発見されている。機械学習の技術では、インプットはfeatures[特徴]とよばれ、アウトプットはpredictions[予想]と呼ばれている。一度モデルが作られると、新しいインプットからアウトプットを予想するために使用される。
-機械学習モデルは例から予想するために「学習」する。この学習はまた、モデルの「訓練」として知られており、この関連したよい品質のデータセットは「トレーニングデータセット」として呼ばれている。
-新しいインプットの上でモデルが使用される段階はモデルを「テストする」としてしられており、これらに関連するデータセットは「テストデータセット」として知られている。</p>
+<p>これらはインプットとアウトプットのペアの具体例から発見されている。機械学習の技術では、インプットはfeatures[特徴]とよばれ、アウトプットはpredictions[予想]と呼ばれている。一度モデルが作られると、新しいインプットからアウトプットを予想するために使用される。機械学習モデルは例から予想するために「学習」する。この学習はまた、モデルの「訓練」として知られており、この関連したよい品質のデータセットは「トレーニングデータセット」として呼ばれている。
+新しいインプットの上でモデルが使用される段階はモデルを「テストする」として知られており、これらに関連するデータセットは「テストデータセット」として知られている。</p>
 
-<p>ここにはこの学習を実行するための異なる方法がいくつかある。これらの中でもっともよく知られているのは、「分類」と「回帰」の技術だ。Gmail Spam Filterは「分類」の技術の一例になる。スパムかそうでないのかといったマークがつけられたEmailのセットが与えられると、Emailの特徴を学び、そうすると未来のemailメッセージをスパムかそうでないかをマークするプロセスが可能になる。「分類」はどの分類普遍データがふさわしいかの予想を取り扱い、「回帰」は継続した数的なデータの予想を取り扱う。回帰の例は一般化のためのいくつかのデータポイントを通して導き出された最も適切な水準だ。分類も回帰も教師信号ありの学習の例で、目的の価値、もしくはラベルを予想するためのアルゴリズムとして示されている。</p>
+<p>この学習を実行するための異なる方法がいくつかある。これらの中でもっともよく知られているのは、「分類」と「回帰」の技術だ。Gmail Spam Filterは「分類」の技術の一例になる。スパムかそうでないかといったマークがつけられたEmailのセットが与えられると、そのEmailの特徴を学び、未来のemailメッセージをスパムかそうでないかマークするためのプロセスが可能になる。「分類」はどの分類普遍データがふさわしいかの予想を取り扱い、「回帰」は継続した数的なデータの予想を取り扱う。回帰の例は一般化のためのいくつかのデータポイントを通して導き出された最も適切な水準だ。分類も回帰も教師信号ありの学習の例で、目的の価値、もしくはラベルを予想するためのアルゴリズムとして示されている。</p>
 
 <p>この反対が、教師信号なしの学習であり、そのデータのために与えられるような目的の値やラベルといったものはない。この例としてはクラスタリングが相当しうる。クラスタリングは項目をグルーピングするタスクで、同じグループ、もしくは他のクラスタの中の対象物はお互い、他のクラスタの内部の対象よりも（どこか、もしくは複数個所が）似ている。</p>
 
-<p>なぜこんなにも複数の選択があるのか？どうやってそのアルゴリズムを学ぶのか？データのニュアンスを考慮せずに、予想の目的に注目することが親指ルール（大まかなやり方）だ。</p>
+<p>なぜこんなにも複数の選択があるのか？
+どうやってそのアルゴリズムを学ぶのか？
+データのニュアンスを考慮せずに、予想の目的に注目することが親指ルール（大まかなやり方）だ。</p>
 
 <p>・もしも対象の値を予想することが今回のpredictionであった場合には、私たちは教師あり信号を使用する。そうでなければ教師なし信号、密度見積もりアルゴリズムを使用する。</p>
 
-<p>これに気づくのは重要だが、それは絶対のルールではなく、むしろアルゴリズムの使用方法はかなりファジーだ。これは機械学習ではかなり普通のことで、自然界ではほとんどの問題は決定論的ではなく、それらがどういうものかを確認するために多くの違ったアルゴリズムが試される。
+<p>それは絶対のルールではなく、むしろアルゴリズムの使用方法はかなりファジーだと気づくのは重要だ。これは機械学習ではかなり普通のことで、自然界ではほとんどの問題は決定論的ではなく、それらがどういうものかを確認するために多くの違ったアルゴリズムが試される。
 またGradient Boostingのようなアンサンブルモデルもあり、弱い予見モデルのアンサンブルを使用した回帰技術を使用している。典型では、改善された予想モデルを取り入れるための意思決定ツリーのようなものがある。
 記号回帰を基礎としたデータからモデルを推量するNutonian Euraqaという興味深いツールも存在している。これはロボティックデータサイエンティストとも呼ばれている。</p>
 
-<p>多くのアルゴリズムがお互い異なり、一つのものを使うステップは似ている。</p>
+<p>多くのアルゴリズムがお互い異なり、使うステップは一辺倒で似ている。</p>
 
 <p>１、データ集め
 ２、データを準備
@@ -184,9 +184,9 @@ Gmailのシステムはユーザーが読んだ、返事したメッセージか
 ６、アルゴリズムをテスト
 ７、繰り返し、Deploy</p>
 
-<p>データサイエンスの多くの他の側面（データラングリング）により、RとＰｙｔｈｏｎは両方とも機械学習を利用するために人気のある言語だ。BigMLのようなMLaasやサービスとして機械学習を提供するスタートアップもある。</p>
+<p>データサイエンスの多くの他の側面（データラングリング）により、RとPythonは両方とも機械学習を利用するために人気のある言語だ。BigMLのようなMLaasやサービスとして機械学習を提供するスタートアップもある。</p>
 
-<p>この投稿の結論として、ゴミ入れ、ゴミ出し、そしてアルゴリズムの問題でなければ、データ品質の問題が多い。データ量やアルゴリズムの複雑さは品質の代わりには成り得ない。そしてもちろん、全ての予見、機械学習は間違いうるということだ。</p>
+<p>この投稿の結論として、ゴミ入れ、ゴミ出し、そしてアルゴリズムの問題でなければ、データ品質の問題が多い。データ量やアルゴリズムの複雑さは品質の代わりには成り得ない。そしてもちろん、全ての予想、機械学習は間違いうるということだ。</p>
 </div>
 
 
