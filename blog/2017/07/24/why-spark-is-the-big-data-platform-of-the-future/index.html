@@ -160,9 +160,11 @@ Dataframes in SparkS
 Apache Sparkはそのin-memoryによるパフォーマンスでよく知られ、しかしそのon-diskでの有能さについて思い違いも生じている。スパークは事実としてはMapReduceのような古いフレームワークと比べられた時には、on-diskでもin-memoryでもとても改善されたパフォーマンスを発揮する総合実行エンジンだ。
 その高度な有効無閉路グラフ実行エンジンにより、Apache Sparkはin memoryで100x、on deskで10xのスピード以上でプログラムを走らせることが可能になっている。では、なぜApache SparkはMapReduceよりも速いのか。</p>
 
-<p>・MapReduceの場合、MapとReduceのステップの中間に、シャッフルステップ、もしくは同期の運用がキーステップとして存在している。Apache Sparkはパフォーマンスを改善するためにSort-based shuffleのデザインを実装している。
-・Apache Sparkは開発者にひとつづつではなく、一度にDAGsを実行させることがDAG (directed-acyclic graph)もまた実装している。これはMapReduceによって要求されるコストがかかる同期を取り除いてくれる。また、これはStormやTazでも使用されている。
-・Apache SparkはDAGsを介してのin-memoryデータシェアリングをサポートするので、同時にハイスピードで同じデータ上で違うジョブの稼働が可能になっている。</p>
+<p>・MapReduceの場合、MapとReduceのステップの中間に、シャッフルステップ、もしくは同期の運用がキーステップとして存在している。Apache Sparkはパフォーマンスを改善するためにSort-based shuffleのデザインを実装している。</p>
+
+<p>・Apache Sparkは開発者に一度にDAGsを実行させることができるDAG (directed-acyclic graph)もまた実装している。これはMapReduceによって要求されるコストがかかる同期を取り除いてくれるし、StormやTazでも使用されている。</p>
+
+<p>・Apache SparkはDAGsを介してのin-memoryデータシェアリングをサポートするので、同時にハイスピードで同じデータ上で違うジョブの稼働が可能になっている。</p>
 
 <p>Hadoopはメモリが依然として相対的に高価であったような10年前に開発された産物であることを思い出すことは重要であるし、それゆえ実行するステップの合間に保守状態の方法としてディスクに固執したアプローチのデザインを取っていた。
 一方、Sparkは2009年にバークレー大学でAMPラボで開発され、メモリがかなり安くなった2010年にOpenSourceになった。それゆえ、Sparkはメモリにデータを貯蔵し、必要であればディスクへ見える状態で入れておくこともする。これにより、よりよいパフォーマンスを達成している。</p>
